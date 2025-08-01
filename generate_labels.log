@@ -1,0 +1,20 @@
+2025-08-01 22:07:34,083 - INFO - Starting labels.csv generation
+2025-08-01 22:07:34,084 - INFO - Processing train directory: dataset/train
+2025-08-01 22:07:34,085 - ERROR - Directory does not exist: dataset/train
+2025-08-01 22:07:34,085 - INFO - Processing test directory: dataset/test
+2025-08-01 22:07:34,085 - ERROR - Directory does not exist: dataset/test
+2025-08-01 22:07:34,086 - INFO - Processing train_new directory: dataset_New/train
+2025-08-01 22:07:34,086 - ERROR - Directory does not exist: dataset_New/train
+2025-08-01 22:07:34,086 - INFO - Processing test_new directory: dataset_New/test
+2025-08-01 22:07:34,087 - ERROR - Directory does not exist: dataset_New/test
+2025-08-01 22:07:34,088 - ERROR - No valid images found. Check dataset structure and tea_variants list.
+2025-08-01 22:10:43,290 - INFO - Starting labels.csv generation
+2025-08-01 22:10:43,292 - INFO - Processing train directory: dataset/train
+2025-08-01 22:10:43,292 - WARNING - Directory does not exist: dataset/train
+2025-08-01 22:10:43,293 - INFO - Processing test directory: dataset/test
+2025-08-01 22:10:43,294 - WARNING - Directory does not exist: dataset/test
+2025-08-01 22:10:43,294 - INFO - Processing train_new directory: dataset_New/train
+2025-08-01 22:10:43,294 - WARNING - Directory does not exist: dataset_New/train
+2025-08-01 22:10:43,295 - INFO - Processing test_new directory: dataset_New/test
+2025-08-01 22:10:43,295 - WARNING - Directory does not exist: dataset_New/test
+2025-08-01 22:10:43,295 - ERROR - No valid images found. Check dataset structure and tea_variants list.
