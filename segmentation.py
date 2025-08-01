@@ -23,4 +23,4 @@ def segment_image(image):
         return valid_contours
     except Exception as e:
         logging.error(f"Error segmenting image: {str(e)}")
-        raise
+        return []

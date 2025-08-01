@@ -1,0 +1,19 @@
+2025-08-01 23:36:14,151 - INFO - Starting comprehensive dataset verification
+2025-08-01 23:36:14,151 - INFO - Project root: C:\L4S1\PythonProject2
+2025-08-01 23:36:14,152 - INFO - ============================================================
+2025-08-01 23:36:14,152 - INFO - Checking train: C:\L4S1\PythonProject2\dataset\train
+2025-08-01 23:36:14,153 - INFO - ============================================================
+2025-08-01 23:36:14,153 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset\train
+2025-08-01 23:36:14,154 - INFO - ============================================================
+2025-08-01 23:36:14,155 - INFO - Checking test: C:\L4S1\PythonProject2\dataset\test
+2025-08-01 23:36:14,155 - INFO - ============================================================
+2025-08-01 23:36:14,155 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset\test
+2025-08-01 23:36:14,155 - INFO - ============================================================
+2025-08-01 23:36:14,155 - INFO - Checking train_new: C:\L4S1\PythonProject2\dataset_New\train
+2025-08-01 23:36:14,155 - INFO - ============================================================
+2025-08-01 23:36:14,157 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset_New\train
+2025-08-01 23:36:14,158 - INFO - ============================================================
+2025-08-01 23:36:14,158 - INFO - Checking test_new: C:\L4S1\PythonProject2\dataset_New\test
+2025-08-01 23:36:14,159 - INFO - ============================================================
+2025-08-01 23:36:14,159 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset_New\test
+2025-08-01 23:36:14,159 - ERROR - No valid datasets found! Please check your dataset directories.

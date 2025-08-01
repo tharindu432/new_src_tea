@@ -1,3 +1,13 @@
+import os
+import sys
+import numpy as np
+import pandas as pd
+import logging
+import joblib
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+
+# Import custom modules
 from preprocess import preprocess_dataset
 from feature_extraction import extract_features
 from train_model import train_and_fine_tune_models
@@ -5,12 +15,6 @@ from evaluate import evaluate_model
 from visualize import visualize_performance
 from config import Config
 from utils import ensure_dir
-from sklearn.preprocessing import LabelEncoder
-import joblib
-import logging
-import numpy as np
-import pandas as pd
-import os
 
 
 def main():
@@ -18,180 +22,263 @@ def main():
     Orchestrate the entire pipeline with visualizations and robust error handling.
     """
     try:
-        # Validate dataset directories
-        for directory in [Config.TRAIN_DIR, Config.TEST_DIR, Config.TRAIN_NEW_DIR, Config.TEST_NEW_DIR]:
-            if not os.path.exists(directory):
-                logging.warning(f"Dataset directory not found, skipping: {directory}")
-                continue
-            if not os.listdir(directory):
-                logging.warning(f"Dataset directory is empty, skipping: {directory}")
-                continue
+        print("Starting Tea Quality Assessment Pipeline...")
 
-        # Validate single labels file
-        if not os.path.exists(Config.LABELS_FILE):
-            raise FileNotFoundError(f"Labels file not found: {Config.LABELS_FILE}")
-        if os.stat(Config.LABELS_FILE).st_size == 0:
-            raise ValueError(f"Labels file is empty: {Config.LABELS_FILE}")
-        labels_df = pd.read_csv(Config.LABELS_FILE)
-        logging.info(f"Loaded labels.csv with {len(labels_df)} entries")
-        logging.info(f"Tea variants: {labels_df['tea_variant'].unique()}")
-        logging.info(f"Elevations: {labels_df['elevation'].unique()}")
+        # Create output directories first
+        directories_to_create = [
+            Config.OUTPUT_DIR,
+            Config.MODELS_DIR,
+            Config.RESULTS_DIR,
+            Config.LOGS_DIR,
+            Config.VISUALIZATIONS_DIR,
+            Config.PREPROCESSED_DIR,
+            f"{Config.PREPROCESSED_DIR}/train",
+            f"{Config.PREPROCESSED_DIR}/test",
+            Config.PREPROCESSED_NEW_DIR,
+            f"{Config.PREPROCESSED_NEW_DIR}/train",
+            f"{Config.PREPROCESSED_NEW_DIR}/test"
+        ]
 
-        # Create output directories
-        ensure_dir(Config.PREPROCESSED_DIR)
-        ensure_dir(f"{Config.PREPROCESSED_DIR}/train")
-        ensure_dir(f"{Config.PREPROCESSED_DIR}/test")
-        ensure_dir(Config.PREPROCESSED_NEW_DIR)
-        ensure_dir(f"{Config.PREPROCESSED_NEW_DIR}/train")
-        ensure_dir(f"{Config.PREPROCESSED_NEW_DIR}/test")
-        ensure_dir(Config.MODELS_DIR)
-        ensure_dir(Config.RESULTS_DIR)
-        ensure_dir(Config.LOGS_DIR)
-        ensure_dir(Config.VISUALIZATIONS_DIR)
+        for directory in directories_to_create:
+            ensure_dir(directory)
 
         # Setup logging after directories are created
         Config.setup_logging()
-        logging.info("Starting pipeline")
+        logging.info("Starting Tea Quality Assessment Pipeline")
 
-        # Preprocessing
-        logging.info("Preprocessing datasets...")
-        preprocess_dataset(Config.TRAIN_DIR, f"{Config.PREPROCESSED_DIR}/train")
-        preprocess_dataset(Config.TEST_DIR, f"{Config.PREPROCESSED_DIR}/test")
-        preprocess_dataset(Config.TRAIN_NEW_DIR, f"{Config.PREPROCESSED_NEW_DIR}/train")
-        preprocess_dataset(Config.TEST_NEW_DIR, f"{Config.PREPROCESSED_NEW_DIR}/test")
+        # Validate dataset directories
+        available_dirs = []
+        dataset_dirs = [
+            (Config.TRAIN_DIR, "dataset/train"),
+            (Config.TEST_DIR, "dataset/test"),
+            (Config.TRAIN_NEW_DIR, "dataset_New/train"),
+            (Config.TEST_NEW_DIR, "dataset_New/test")
+        ]
 
-        # Feature Extraction
-        logging.info("Extracting features...")
-        X_train, y_train, train_overlap_counts = [], [], []
-        X_test, y_test, test_overlap_counts = [], [], []
-        X_train_new, y_train_new, train_new_overlap_counts = [], [], []
-        X_test_new, y_test_new, test_new_overlap_counts = [], [], []
+        for directory, name in dataset_dirs:
+            if os.path.exists(directory) and os.listdir(directory):
+                available_dirs.append((directory, name))
+                logging.info(f"Found dataset directory: {name}")
+            else:
+                logging.warning(f"Dataset directory not found or empty: {name}")
 
-        # Extract features from dataset
-        try:
-            X_train, y_train, train_overlap_counts = extract_features(
-                f"{Config.PREPROCESSED_DIR}/train", Config.LABELS_FILE, Config.VISUALIZATIONS_DIR
-            )
-            logging.info(f"Extracted {len(X_train)} training samples from dataset/train")
-        except Exception as e:
-            logging.warning(f"No features extracted from dataset/train: {str(e)}")
-        try:
-            X_test, y_test, test_overlap_counts = extract_features(
-                f"{Config.PREPROCESSED_DIR}/test", Config.LABELS_FILE, Config.VISUALIZATIONS_DIR
-            )
-            logging.info(f"Extracted {len(X_test)} test samples from dataset/test")
-        except Exception as e:
-            logging.warning(f"No features extracted from dataset/test: {str(e)}")
+        if not available_dirs:
+            raise ValueError("No valid dataset directories found. Please check your dataset structure.")
 
-        # Extract features from dataset_New
-        try:
-            X_train_new, y_train_new, train_new_overlap_counts = extract_features(
-                f"{Config.PREPROCESSED_NEW_DIR}/train", Config.LABELS_FILE, Config.VISUALIZATIONS_DIR
-            )
-            logging.info(f"Extracted {len(X_train_new)} training samples from dataset_New/train")
-        except Exception as e:
-            logging.warning(f"No features extracted from dataset_New/train: {str(e)}")
-        try:
-            X_test_new, y_test_new, test_new_overlap_counts = extract_features(
-                f"{Config.PREPROCESSED_NEW_DIR}/test", Config.LABELS_FILE, Config.VISUALIZATIONS_DIR
-            )
-            logging.info(f"Extracted {len(X_test_new)} test samples from dataset_New/test")
-        except Exception as e:
-            logging.warning(f"No features extracted from dataset_New/test: {str(e)}")
+        # Validate labels file
+        if not os.path.exists(Config.LABELS_FILE):
+            raise FileNotFoundError(f"Labels file not found: {Config.LABELS_FILE}")
 
-        # Combine features and labels
-        X_train_combined = []
-        y_train_combined = []
-        X_test_combined = []
-        y_test_combined = []
-        train_overlap_counts_combined = []
-        test_overlap_counts_combined = []
+        if os.stat(Config.LABELS_FILE).st_size == 0:
+            raise ValueError(f"Labels file is empty: {Config.LABELS_FILE}")
 
-        if X_train and X_train_new:
-            if X_train.shape[1] != X_train_new.shape[1]:
-                raise ValueError("Feature dimensions mismatch between dataset and dataset_New for training")
-            X_train_combined = np.vstack([X_train, X_train_new])
-            y_train_combined = y_train + y_train_new
-            train_overlap_counts_combined = train_overlap_counts + train_new_overlap_counts
-        elif X_train:
-            X_train_combined = X_train
-            y_train_combined = y_train
-            train_overlap_counts_combined = train_overlap_counts
-        elif X_train_new:
-            X_train_combined = X_train_new
-            y_train_combined = y_train_new
-            train_overlap_counts_combined = train_new_overlap_counts
-        else:
-            raise ValueError("No training features extracted from either dataset")
+        labels_df = pd.read_csv(Config.LABELS_FILE)
+        logging.info(f"Loaded labels.csv with {len(labels_df)} entries")
+        logging.info(f"Tea variants: {sorted(labels_df['tea_variant'].unique())}")
+        logging.info(f"Elevations: {sorted(labels_df['elevation'].unique())}")
 
-        if X_test and X_test_new:
-            if X_test.shape[1] != X_test_new.shape[1]:
-                raise ValueError("Feature dimensions mismatch between dataset and dataset_New for testing")
-            X_test_combined = np.vstack([X_test, X_test_new])
-            y_test_combined = y_test + y_test_new
-            test_overlap_counts_combined = test_overlap_counts + test_new_overlap_counts
-        elif X_test:
-            X_test_combined = X_test
-            y_test_combined = y_test
-            test_overlap_counts_combined = test_overlap_counts
-        elif X_test_new:
-            X_test_combined = X_test_new
-            y_test_combined = y_test_new
-            test_overlap_counts_combined = test_new_overlap_counts
-        else:
-            raise ValueError("No test features extracted from either dataset")
+        # Preprocessing phase
+        logging.info("=" * 50)
+        logging.info("PREPROCESSING PHASE")
+        logging.info("=" * 50)
 
-        logging.info(f"Combined {len(X_train_combined)} training samples and {len(X_test_combined)} test samples")
+        preprocessing_tasks = [
+            (Config.TRAIN_DIR, f"{Config.PREPROCESSED_DIR}/train"),
+            (Config.TEST_DIR, f"{Config.PREPROCESSED_DIR}/test"),
+            (Config.TRAIN_NEW_DIR, f"{Config.PREPROCESSED_NEW_DIR}/train"),
+            (Config.TEST_NEW_DIR, f"{Config.PREPROCESSED_NEW_DIR}/test")
+        ]
+
+        for input_dir, output_dir in preprocessing_tasks:
+            if os.path.exists(input_dir):
+                logging.info(f"Preprocessing {input_dir}...")
+                preprocess_dataset(input_dir, output_dir)
+            else:
+                logging.info(f"Skipping preprocessing for {input_dir} (not found)")
+
+        # Feature Extraction phase
+        logging.info("=" * 50)
+        logging.info("FEATURE EXTRACTION PHASE")
+        logging.info("=" * 50)
+
+        all_features = []
+        all_labels = []
+        all_overlap_counts = []
+
+        extraction_tasks = [
+            (f"{Config.PREPROCESSED_DIR}/train", "dataset/train"),
+            (f"{Config.PREPROCESSED_DIR}/test", "dataset/test"),
+            (f"{Config.PREPROCESSED_NEW_DIR}/train", "dataset_New/train"),
+            (f"{Config.PREPROCESSED_NEW_DIR}/test", "dataset_New/test")
+        ]
+
+        for preprocessed_dir, name in extraction_tasks:
+            if os.path.exists(preprocessed_dir):
+                logging.info(f"Extracting features from {name}...")
+                try:
+                    X, y, overlap_counts = extract_features(
+                        preprocessed_dir, Config.LABELS_FILE, Config.VISUALIZATIONS_DIR
+                    )
+                    if len(X) > 0:
+                        all_features.append(X)
+                        all_labels.extend(y)
+                        all_overlap_counts.extend(overlap_counts)
+                        logging.info(f"Extracted {len(X)} samples from {name}")
+                    else:
+                        logging.warning(f"No features extracted from {name}")
+                except Exception as e:
+                    logging.error(f"Failed to extract features from {name}: {str(e)}")
+                    continue
+            else:
+                logging.info(f"Skipping feature extraction for {name} (preprocessed directory not found)")
+
+        # Combine all features
+        if not all_features:
+            raise ValueError("No features were extracted from any dataset")
+
+        # Combine feature arrays
+        X_combined = np.vstack(all_features)
+        y_combined = all_labels
+
+        logging.info(f"Combined dataset: {len(X_combined)} samples with {X_combined.shape[1]} features")
+        logging.info(f"Class distribution: {pd.Series(y_combined).value_counts().to_dict()}")
+
+        # Split into train/test sets
+        X_train, X_test, y_train, y_test = train_test_split(
+            X_combined, y_combined,
+            test_size=Config.TEST_SIZE,
+            random_state=Config.RANDOM_STATE,
+            stratify=y_combined
+        )
+
+        logging.info(f"Training set: {len(X_train)} samples")
+        logging.info(f"Test set: {len(X_test)} samples")
 
         # Label Encoding
+        logging.info("Encoding labels...")
         le = LabelEncoder()
-        y_train_combined = le.fit_transform(y_train_combined)
-        y_test_combined = le.transform(y_test_combined)
-        logging.info("Encoded labels")
+        y_train_encoded = le.fit_transform(y_train)
+        y_test_encoded = le.transform(y_test)
+
+        # Save label encoder
         joblib.dump(le, f"{Config.MODELS_DIR}/label_encoder.pkl")
+        logging.info(f"Label encoder saved. Classes: {le.classes_}")
 
-        # Model Training
-        logging.info("Training models...")
-        best_models, ensemble = train_and_fine_tune_models(X_train_combined, y_train_combined)
+        # Model Training phase
+        logging.info("=" * 50)
+        logging.info("MODEL TRAINING PHASE")
+        logging.info("=" * 50)
 
-        # Evaluation
-        logging.info("Evaluating models...")
+        best_models, ensemble = train_and_fine_tune_models(X_train, y_train_encoded)
+
+        if not best_models:
+            raise ValueError("No models were successfully trained")
+
+        # Model Evaluation phase
+        logging.info("=" * 50)
+        logging.info("MODEL EVALUATION PHASE")
+        logging.info("=" * 50)
+
         accuracies = []
         reports = {}
         y_pred_dict = {}
         model_names = list(best_models.keys()) + ['Ensemble']
 
         for model_name in model_names:
-            model_path = f"{Config.MODELS_DIR}/{model_name}.pkl"
-            if not os.path.exists(model_path):
-                raise FileNotFoundError(f"Model file {model_path} not found")
-            model = joblib.load(model_path)
-            accuracy, report, y_pred = evaluate_model(model, X_test_combined, y_test_combined, model_name,
-                                                      Config.VISUALIZATIONS_DIR)
-            accuracies.append(accuracy)
-            reports[model_name] = report
-            y_pred_dict[model_name] = y_pred
+            try:
+                model_path = f"{Config.MODELS_DIR}/{model_name}.pkl"
+                if not os.path.exists(model_path):
+                    logging.warning(f"Model file {model_path} not found, skipping")
+                    continue
 
-        # Visualize Performance
-        logging.info("Visualizing performance...")
-        visualize_performance(model_names, accuracies, reports, y_test_combined, y_pred_dict, Config.VISUALIZATIONS_DIR)
+                model = joblib.load(model_path)
+                accuracy, report, y_pred = evaluate_model(
+                    model, X_test, y_test_encoded, model_name, Config.VISUALIZATIONS_DIR
+                )
 
-        # Save Overlap Counts
-        overlap_df = pd.DataFrame({
-            'sample_id': [f"train_{i}" for i in range(len(train_overlap_counts_combined))] + [f"test_{i}" for i in
-                                                                                              range(
-                                                                                                  len(test_overlap_counts_combined))],
-            'overlap_count': train_overlap_counts_combined + test_overlap_counts_combined,
-            'dataset': ['train'] * len(train_overlap_counts_combined) + ['test'] * len(test_overlap_counts_combined)
-        })
-        overlap_path = f"{Config.RESULTS_DIR}/overlap_counts.csv"
-        overlap_df.to_csv(overlap_path, index=False)
-        logging.info(f"Saved overlap counts to {overlap_path}")
+                accuracies.append(accuracy)
+                reports[model_name] = report
+                y_pred_dict[model_name] = y_pred
 
-        logging.info("Pipeline completed successfully")
+            except Exception as e:
+                logging.error(f"Error evaluating {model_name}: {str(e)}")
+                continue
+
+        if not accuracies:
+            raise ValueError("No models were successfully evaluated")
+
+        # Visualization phase
+        logging.info("=" * 50)
+        logging.info("VISUALIZATION PHASE")
+        logging.info("=" * 50)
+
+        try:
+            evaluated_models = [name for name in model_names if name in y_pred_dict]
+            evaluated_accuracies = [acc for name, acc in zip(model_names, accuracies) if name in y_pred_dict]
+
+            visualize_performance(
+                evaluated_models, evaluated_accuracies, reports,
+                y_test_encoded, y_pred_dict, Config.VISUALIZATIONS_DIR
+            )
+        except Exception as e:
+            logging.error(f"Error in visualization: {str(e)}")
+
+        # Save results
+        logging.info("=" * 50)
+        logging.info("SAVING RESULTS")
+        logging.info("=" * 50)
+
+        # Save overlap counts
+        try:
+            overlap_df = pd.DataFrame({
+                'sample_id': [f"sample_{i}" for i in range(len(all_overlap_counts))],
+                'overlap_count': all_overlap_counts
+            })
+            overlap_path = f"{Config.RESULTS_DIR}/overlap_counts.csv"
+            overlap_df.to_csv(overlap_path, index=False)
+            logging.info(f"Saved overlap counts to {overlap_path}")
+        except Exception as e:
+            logging.error(f"Error saving overlap counts: {str(e)}")
+
+        # Save model performance summary
+        try:
+            performance_df = pd.DataFrame({
+                'Model': evaluated_models,
+                'Accuracy': evaluated_accuracies
+            })
+            performance_path = f"{Config.RESULTS_DIR}/model_performance.csv"
+            performance_df.to_csv(performance_path, index=False)
+            logging.info(f"Saved model performance to {performance_path}")
+        except Exception as e:
+            logging.error(f"Error saving performance summary: {str(e)}")
+
+        # Final summary
+        logging.info("=" * 50)
+        logging.info("PIPELINE COMPLETED SUCCESSFULLY!")
+        logging.info("=" * 50)
+
+        best_model_idx = np.argmax(evaluated_accuracies)
+        best_model_name = evaluated_models[best_model_idx]
+        best_accuracy = evaluated_accuracies[best_model_idx]
+
+        logging.info(f"Best performing model: {best_model_name} with accuracy: {best_accuracy:.4f}")
+        logging.info(f"Total samples processed: {len(X_combined)}")
+        logging.info(f"Total features per sample: {X_combined.shape[1]}")
+        logging.info(f"Number of classes: {len(le.classes_)}")
+
+        print("\n" + "=" * 50)
+        print("PIPELINE COMPLETED SUCCESSFULLY!")
+        print("=" * 50)
+        print(f"Best model: {best_model_name} (Accuracy: {best_accuracy:.4f})")
+        print(f"Results saved in: {Config.OUTPUT_DIR}")
+        print(f"Check logs at: {Config.LOGS_DIR}/pipeline.log")
+
     except Exception as e:
-        logging.error(f"Error in main pipeline: {str(e)}")
-        raise
+        error_msg = f"Error in main pipeline: {str(e)}"
+        logging.error(error_msg)
+        print(f"\nERROR: {error_msg}")
+        print("Check logs for detailed error information.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

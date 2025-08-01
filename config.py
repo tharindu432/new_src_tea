@@ -54,6 +54,9 @@ class Config:
         """
         Configure logging for the system.
         """
+        # Ensure logs directory exists
+        os.makedirs(Config.LOGS_DIR, exist_ok=True)
+
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',

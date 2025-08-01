@@ -3,6 +3,7 @@ import cv2
 import logging
 from pathlib import Path
 
+
 def ensure_dir(directory):
     """
     Create directory if it doesn't exist.
@@ -13,6 +14,7 @@ def ensure_dir(directory):
     except Exception as e:
         logging.error(f"Error creating directory {directory}: {str(e)}")
         raise
+
 
 def load_image(image_path):
     """
@@ -26,6 +28,7 @@ def load_image(image_path):
     except Exception as e:
         logging.error(f"Error loading image {image_path}: {str(e)}")
         raise
+
 
 def get_sample_groups(input_dir):
     """
@@ -55,10 +58,13 @@ def get_sample_groups(input_dir):
                     logging.info(f"Found take {sample_id} with {len(image_files)} images")
                 else:
                     logging.warning(f"Take {root} has no valid images")
+
         if not sample_groups:
-            raise ValueError(f"No valid sample groups found in {input_dir}")
+            logging.warning(f"No valid sample groups found in {input_dir}")
+            return []
+
         logging.info(f"Found {len(sample_groups)} sample groups in {input_dir}")
         return sample_groups
     except Exception as e:
         logging.error(f"Error getting sample groups from {input_dir}: {str(e)}")
-        raise
+        return []
