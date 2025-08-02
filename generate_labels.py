@@ -168,11 +168,11 @@ def generate_labels_csv(train_dir, test_dir, train_new_dir, test_new_dir, output
 
 if __name__ == "__main__":
     # Define paths
-    train_dir = "dataset/train"
-    test_dir = "dataset/test"
-    train_new_dir = "dataset_New/train"
-    test_new_dir = "dataset_New/test"
-    output_file = "dataset/labels.csv"
+    train_dir = "../dataset/train"
+    test_dir = "../dataset/test"
+    train_new_dir = "../dataset_New/train"
+    test_new_dir = "../dataset_New/test"
+    output_file = "../dataset/labels.csv"
 
     try:
         df = generate_labels_csv(train_dir, test_dir, train_new_dir, test_new_dir, output_file)

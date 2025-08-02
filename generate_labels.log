@@ -1750,3 +1750,800 @@
 2025-08-01 23:29:43,819 - INFO - Elevations found: ['High-Medium', 'Low']
 2025-08-01 23:29:43,820 - INFO - Dataset types: ['test', 'train', 'train_new']
 2025-08-01 23:29:43,820 - INFO - Saved labels.csv to dataset/labels.csv
+2025-08-01 23:43:32,600 - INFO - Starting labels.csv generation
+2025-08-01 23:43:32,601 - WARNING - Existing labels.csv found at ../dataset/labels.csv. Will overwrite.
+2025-08-01 23:43:32,601 - INFO - Processing train directory: ../dataset/train
+2025-08-01 23:43:32,603 - WARNING - No valid images found in ../dataset/train\High-Medium\BOP\PARTICLE
+2025-08-01 23:43:32,604 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,606 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,607 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,608 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,609 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,610 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,611 - WARNING - No valid images found in ../dataset/train\High-Medium\BOP01\PARTICLE
+2025-08-01 23:43:32,612 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,613 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,615 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,615 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,618 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,619 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,621 - WARNING - No valid images found in ../dataset/train\High-Medium\BOPA\PARTICLE
+2025-08-01 23:43:32,623 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,624 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,625 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,626 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,628 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,630 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,631 - WARNING - No valid images found in ../dataset/train\High-Medium\BOPF\PARTICLE
+2025-08-01 23:43:32,633 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,633 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,635 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,636 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,638 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,640 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,642 - WARNING - No valid images found in ../dataset/train\High-Medium\FBOP\PARTICLE
+2025-08-01 23:43:32,643 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,644 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,646 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,647 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,647 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,649 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,651 - WARNING - No valid images found in ../dataset/train\High-Medium\OP\PARTICLE
+2025-08-01 23:43:32,652 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,653 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,655 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,656 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,656 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,657 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,659 - WARNING - No valid images found in ../dataset/train\High-Medium\OP01\PARTICLE
+2025-08-01 23:43:32,660 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,661 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,662 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,663 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,664 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,666 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,667 - WARNING - No valid images found in ../dataset/train\High-Medium\OPA\PARTICLE
+2025-08-01 23:43:32,668 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,668 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,669 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,671 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,672 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,673 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,674 - WARNING - No valid images found in ../dataset/train\High-Medium\PEKOE\PARTICLE
+2025-08-01 23:43:32,675 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,675 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,676 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,676 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,678 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,679 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,680 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_07: 5 images
+2025-08-01 23:43:32,682 - WARNING - No valid images found in ../dataset/train\Low\BOP01\PARTICLE
+2025-08-01 23:43:32,684 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_01: 2 images
+2025-08-01 23:43:32,685 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,685 - WARNING - No valid images found in ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_03
+2025-08-01 23:43:32,688 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,689 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,690 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,691 - WARNING - No valid images found in ../dataset/train\Low\OP\PARTICLE
+2025-08-01 23:43:32,692 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,693 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,694 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,696 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,697 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,699 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,700 - WARNING - No valid images found in ../dataset/train\Low\OP01\PARTICLE
+2025-08-01 23:43:32,703 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,704 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,705 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,707 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,708 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,709 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,711 - WARNING - No valid images found in ../dataset/train\Low\OPA\PARTICLE
+2025-08-01 23:43:32,713 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,714 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,716 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,719 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,720 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,721 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,723 - WARNING - No valid images found in ../dataset/train\Low\PEKOE\PARTICLE
+2025-08-01 23:43:32,724 - INFO - Processed sample ../dataset/train\Low\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,725 - WARNING - No valid images found in ../dataset/train\Low\PEKOE\PARTICLE\SAMPLE_02
+2025-08-01 23:43:32,726 - INFO - Processed sample ../dataset/train\Low\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,728 - INFO - Processed sample ../dataset/train\Low\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,730 - WARNING - No valid images found in ../dataset/train\Low\PEKOE01\PARTICLE
+2025-08-01 23:43:32,730 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,731 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,733 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,734 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,735 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,736 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,736 - INFO - Processed 404 images from train directory
+2025-08-01 23:43:32,736 - INFO - Processing test directory: ../dataset/test
+2025-08-01 23:43:32,738 - WARNING - No valid images found in ../dataset/test\High-Medium\BOP\PARTICLE
+2025-08-01 23:43:32,739 - INFO - Processed sample ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,740 - INFO - Processed sample ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,740 - INFO - Processed sample ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,742 - INFO - Processed sample ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,742 - INFO - Processed sample ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,743 - INFO - Processed sample ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,745 - WARNING - No valid images found in ../dataset/test\High-Medium\BOP01\PARTICLE
+2025-08-01 23:43:32,746 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,747 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,748 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,749 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,751 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,752 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,753 - WARNING - No valid images found in ../dataset/test\High-Medium\BOPA\PARTICLE
+2025-08-01 23:43:32,754 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,755 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,756 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,757 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,759 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,760 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,761 - WARNING - No valid images found in ../dataset/test\High-Medium\BOPF\PARTICLE
+2025-08-01 23:43:32,762 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,764 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,764 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,767 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,768 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,769 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,771 - WARNING - No valid images found in ../dataset/test\High-Medium\FBOP\PARTICLE
+2025-08-01 23:43:32,772 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,773 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,774 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,776 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,778 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,779 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,780 - WARNING - No valid images found in ../dataset/test\High-Medium\OP\PARTICLE
+2025-08-01 23:43:32,781 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,782 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,783 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,783 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,784 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,785 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,787 - WARNING - No valid images found in ../dataset/test\High-Medium\OP01\PARTICLE
+2025-08-01 23:43:32,789 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,789 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,791 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,792 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,794 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,795 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,796 - WARNING - No valid images found in ../dataset/test\High-Medium\OPA\PARTICLE
+2025-08-01 23:43:32,797 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,798 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,799 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,800 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,802 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,802 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,804 - WARNING - No valid images found in ../dataset/test\High-Medium\PEKOE\PARTICLE
+2025-08-01 23:43:32,805 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,807 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,807 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,809 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,810 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,811 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,812 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_07: 5 images
+2025-08-01 23:43:32,813 - WARNING - No valid images found in ../dataset/test\High-Medium\PEKOE01\PARTICLE
+2025-08-01 23:43:32,814 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,815 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,816 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,817 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,818 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,819 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,821 - WARNING - No valid images found in ../dataset/test\Low\BOP01\PARTICLE
+2025-08-01 23:43:32,822 - INFO - Processed sample ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_01: 2 images
+2025-08-01 23:43:32,823 - INFO - Processed sample ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,824 - WARNING - No valid images found in ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_03
+2025-08-01 23:43:32,825 - INFO - Processed sample ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,827 - INFO - Processed sample ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,828 - INFO - Processed sample ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,828 - WARNING - No valid images found in ../dataset/test\Low\OP\PARTICLE
+2025-08-01 23:43:32,830 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,831 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,832 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,834 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,835 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,836 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,837 - WARNING - No valid images found in ../dataset/test\Low\OP01\PARTICLE
+2025-08-01 23:43:32,838 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,840 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,841 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,842 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,843 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,844 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,845 - WARNING - No valid images found in ../dataset/test\Low\OPA\PARTICLE
+2025-08-01 23:43:32,845 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,847 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,847 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,848 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,849 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,850 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,851 - WARNING - No valid images found in ../dataset/test\Low\PEKOE\PARTICLE
+2025-08-01 23:43:32,852 - INFO - Processed sample ../dataset/test\Low\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,853 - WARNING - No valid images found in ../dataset/test\Low\PEKOE\PARTICLE\SAMPLE_02
+2025-08-01 23:43:32,854 - INFO - Processed sample ../dataset/test\Low\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,855 - INFO - Processed sample ../dataset/test\Low\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,858 - WARNING - No valid images found in ../dataset/test\Low\PEKOE01\PARTICLE
+2025-08-01 23:43:32,858 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,860 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,860 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,860 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,862 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,863 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,864 - INFO - Processed 432 images from test directory
+2025-08-01 23:43:32,864 - INFO - Processing train_new directory: ../dataset_New/train
+2025-08-01 23:43:32,865 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE
+2025-08-01 23:43:32,866 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01
+2025-08-01 23:43:32,868 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-01 23:43:32,869 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-01 23:43:32,870 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-01 23:43:32,871 - INFO - Processed sample ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02: 3 images
+2025-08-01 23:43:32,871 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_01
+2025-08-01 23:43:32,873 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-01 23:43:32,874 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-01 23:43:32,876 - INFO - Processed sample ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03: 3 images
+2025-08-01 23:43:32,876 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_01
+2025-08-01 23:43:32,877 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-01 23:43:32,878 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-01 23:43:32,879 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE
+2025-08-01 23:43:32,879 - INFO - Processed sample ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,879 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_01
+2025-08-01 23:43:32,879 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-01 23:43:32,881 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-01 23:43:32,881 - INFO - Processed sample ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02: 3 images
+2025-08-01 23:43:32,882 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_01
+2025-08-01 23:43:32,882 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-01 23:43:32,884 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-01 23:43:32,884 - INFO - Processed sample ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03: 3 images
+2025-08-01 23:43:32,885 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_01
+2025-08-01 23:43:32,886 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-01 23:43:32,887 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-01 23:43:32,888 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE
+2025-08-01 23:43:32,890 - INFO - Processed sample ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,890 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01\TAKE_01
+2025-08-01 23:43:32,891 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-01 23:43:32,892 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-01 23:43:32,893 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02
+2025-08-01 23:43:32,894 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02\TAKE_01: 3 images
+2025-08-01 23:43:32,894 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-01 23:43:32,895 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-01 23:43:32,896 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03
+2025-08-01 23:43:32,897 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03\TAKE_01: 3 images
+2025-08-01 23:43:32,898 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-01 23:43:32,900 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-01 23:43:32,901 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE
+2025-08-01 23:43:32,902 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01
+2025-08-01 23:43:32,903 - INFO - Processed take ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-01 23:43:32,903 - INFO - Processed take ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-01 23:43:32,905 - INFO - Processed take ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-01 23:43:32,906 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE
+2025-08-01 23:43:32,907 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01
+2025-08-01 23:43:32,908 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-01 23:43:32,909 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-01 23:43:32,910 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-01 23:43:32,910 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02
+2025-08-01 23:43:32,911 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02\TAKE_01: 3 images
+2025-08-01 23:43:32,911 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-01 23:43:32,911 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-01 23:43:32,911 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03
+2025-08-01 23:43:32,912 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03\TAKE_01: 3 images
+2025-08-01 23:43:32,913 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-01 23:43:32,915 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-01 23:43:32,919 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,920 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,921 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,922 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,923 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,923 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,924 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,925 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,925 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,925 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,926 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,927 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,928 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-01 23:43:32,929 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,930 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,931 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,932 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,932 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,933 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,933 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,934 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,935 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,936 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,936 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,937 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,937 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-01 23:43:32,938 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,939 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,939 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,940 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,941 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,941 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,941 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,943 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,943 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,943 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,943 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,944 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,944 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-01 23:43:32,945 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE
+2025-08-01 23:43:32,945 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01
+2025-08-01 23:43:32,946 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-01 23:43:32,946 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-01 23:43:32,948 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-01 23:43:32,949 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02
+2025-08-01 23:43:32,950 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_01: 3 images
+2025-08-01 23:43:32,951 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-01 23:43:32,952 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-01 23:43:32,953 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03
+2025-08-01 23:43:32,954 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_01: 3 images
+2025-08-01 23:43:32,955 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-01 23:43:32,956 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-01 23:43:32,957 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,958 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,959 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,960 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,961 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,962 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,963 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,965 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,966 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,967 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,967 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,969 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,970 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-01 23:43:32,971 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,971 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,972 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,973 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,973 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,974 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,975 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,976 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,977 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,978 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,978 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,979 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,979 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-01 23:43:32,981 - INFO - Processed 144 images from train_new directory
+2025-08-01 23:43:32,981 - INFO - Processing test_new directory: ../dataset_New/test
+2025-08-01 23:43:32,983 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOP\PARTICLE
+2025-08-01 23:43:32,984 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,985 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,986 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,987 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,988 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,988 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,989 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOP01\PARTICLE
+2025-08-01 23:43:32,989 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,990 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,991 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,992 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,993 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:32,994 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:32,995 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOPA\PARTICLE
+2025-08-01 23:43:32,996 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:32,997 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:32,998 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:32,999 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:32,999 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,002 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,003 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOPF\PARTICLE
+2025-08-01 23:43:33,004 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,005 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,006 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,007 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,009 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,010 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,011 - WARNING - No valid images found in ../dataset_New/test\High-Medium\FBOP\PARTICLE
+2025-08-01 23:43:33,011 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,012 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,013 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,014 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,015 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,016 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,018 - WARNING - No valid images found in ../dataset_New/test\High-Medium\OP\PARTICLE
+2025-08-01 23:43:33,019 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,021 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,022 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,023 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,024 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,025 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,027 - WARNING - No valid images found in ../dataset_New/test\High-Medium\OP01\PARTICLE
+2025-08-01 23:43:33,027 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,028 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,030 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,031 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,031 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,032 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,034 - WARNING - No valid images found in ../dataset_New/test\High-Medium\OPA\PARTICLE
+2025-08-01 23:43:33,035 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,036 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,038 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,039 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,040 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,041 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,042 - WARNING - No valid images found in ../dataset_New/test\High-Medium\PEKOE\PARTICLE
+2025-08-01 23:43:33,044 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,046 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,047 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,048 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,049 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,050 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,050 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_07: 5 images
+2025-08-01 23:43:33,051 - WARNING - No valid images found in ../dataset_New/test\High-Medium\PEKOE01\PARTICLE
+2025-08-01 23:43:33,052 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,053 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,054 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,056 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,057 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,058 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,060 - WARNING - No valid images found in ../dataset_New/test\Low\BOP01\PARTICLE
+2025-08-01 23:43:33,060 - INFO - Processed sample ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_01: 2 images
+2025-08-01 23:43:33,061 - INFO - Processed sample ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,061 - WARNING - No valid images found in ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_03
+2025-08-01 23:43:33,062 - INFO - Processed sample ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,062 - INFO - Processed sample ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,063 - INFO - Processed sample ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,063 - WARNING - No valid images found in ../dataset_New/test\Low\OP\PARTICLE
+2025-08-01 23:43:33,065 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,066 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,067 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,069 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,070 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,071 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,071 - WARNING - No valid images found in ../dataset_New/test\Low\OP01\PARTICLE
+2025-08-01 23:43:33,072 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,073 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,074 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,075 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,076 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,077 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,078 - WARNING - No valid images found in ../dataset_New/test\Low\OPA\PARTICLE
+2025-08-01 23:43:33,079 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,080 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,082 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,083 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,085 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,086 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,088 - WARNING - No valid images found in ../dataset_New/test\Low\PEKOE\PARTICLE
+2025-08-01 23:43:33,089 - INFO - Processed sample ../dataset_New/test\Low\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,089 - WARNING - No valid images found in ../dataset_New/test\Low\PEKOE\PARTICLE\SAMPLE_02
+2025-08-01 23:43:33,091 - INFO - Processed sample ../dataset_New/test\Low\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,092 - INFO - Processed sample ../dataset_New/test\Low\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,093 - WARNING - No valid images found in ../dataset_New/test\Low\PEKOE01\PARTICLE
+2025-08-01 23:43:33,094 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-01 23:43:33,095 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-01 23:43:33,095 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_03: 5 images
+2025-08-01 23:43:33,097 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_04: 5 images
+2025-08-01 23:43:33,098 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_05: 5 images
+2025-08-01 23:43:33,100 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_06: 5 images
+2025-08-01 23:43:33,101 - INFO - Processed 432 images from test_new directory
+2025-08-01 23:43:33,121 - WARNING - Removed 836 duplicate entries
+2025-08-01 23:43:33,134 - INFO - Successfully created labels.csv with 576 entries
+2025-08-01 23:43:33,137 - INFO - Tea variants found: ['BOP', 'BOP01', 'BOPA', 'BOPF', 'BOPSP_NEW', 'FBOP', 'FBOPF01_NEW', 'OP', 'OP01', 'OP01_NEW', 'OPA', 'OPA_NEW', 'OP_NEW', 'PEKOE', 'PEKOE01']
+2025-08-01 23:43:33,138 - INFO - Elevations found: ['High-Medium', 'Low']
+2025-08-01 23:43:33,138 - INFO - Dataset types: ['test', 'train', 'train_new']
+2025-08-01 23:43:33,138 - INFO - Saved labels.csv to ../dataset/labels.csv
+2025-08-02 11:20:33,094 - INFO - Starting labels.csv generation
+2025-08-02 11:20:33,095 - WARNING - Existing labels.csv found at ../dataset/labels.csv. Will overwrite.
+2025-08-02 11:20:33,097 - INFO - Processing train directory: ../dataset/train
+2025-08-02 11:20:33,100 - WARNING - No valid images found in ../dataset/train\High-Medium\BOP\PARTICLE
+2025-08-02 11:20:33,102 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,104 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,105 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,107 - INFO - Processed sample ../dataset/train\High-Medium\BOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,110 - WARNING - No valid images found in ../dataset/train\High-Medium\BOP01\PARTICLE
+2025-08-02 11:20:33,112 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,114 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,116 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,117 - INFO - Processed sample ../dataset/train\High-Medium\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,119 - WARNING - No valid images found in ../dataset/train\High-Medium\BOPA\PARTICLE
+2025-08-02 11:20:33,121 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,122 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,124 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,125 - INFO - Processed sample ../dataset/train\High-Medium\BOPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,127 - WARNING - No valid images found in ../dataset/train\High-Medium\BOPF\PARTICLE
+2025-08-02 11:20:33,129 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,130 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,132 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,133 - INFO - Processed sample ../dataset/train\High-Medium\BOPF\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,136 - WARNING - No valid images found in ../dataset/train\High-Medium\FBOP\PARTICLE
+2025-08-02 11:20:33,137 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,139 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,140 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,142 - INFO - Processed sample ../dataset/train\High-Medium\FBOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,144 - WARNING - No valid images found in ../dataset/train\High-Medium\OP\PARTICLE
+2025-08-02 11:20:33,145 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,147 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,153 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,155 - INFO - Processed sample ../dataset/train\High-Medium\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,158 - WARNING - No valid images found in ../dataset/train\High-Medium\OP01\PARTICLE
+2025-08-02 11:20:33,159 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,161 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,162 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,164 - INFO - Processed sample ../dataset/train\High-Medium\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,166 - WARNING - No valid images found in ../dataset/train\High-Medium\OPA\PARTICLE
+2025-08-02 11:20:33,167 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,169 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,171 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,172 - INFO - Processed sample ../dataset/train\High-Medium\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,175 - WARNING - No valid images found in ../dataset/train\High-Medium\PEKOE\PARTICLE
+2025-08-02 11:20:33,176 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,178 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,180 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,182 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,184 - INFO - Processed sample ../dataset/train\High-Medium\PEKOE\PARTICLE\SAMPLE_07: 5 images
+2025-08-02 11:20:33,186 - WARNING - No valid images found in ../dataset/train\Low\BOP01\PARTICLE
+2025-08-02 11:20:33,187 - WARNING - No valid images found in ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_03
+2025-08-02 11:20:33,188 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,190 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,192 - INFO - Processed sample ../dataset/train\Low\BOP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,193 - WARNING - No valid images found in ../dataset/train\Low\OP\PARTICLE
+2025-08-02 11:20:33,195 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,197 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,198 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,200 - INFO - Processed sample ../dataset/train\Low\OP\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,203 - WARNING - No valid images found in ../dataset/train\Low\OP01\PARTICLE
+2025-08-02 11:20:33,204 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,205 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,207 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,209 - INFO - Processed sample ../dataset/train\Low\OP01\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,212 - WARNING - No valid images found in ../dataset/train\Low\OPA\PARTICLE
+2025-08-02 11:20:33,213 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,216 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,217 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,219 - INFO - Processed sample ../dataset/train\Low\OPA\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,221 - WARNING - No valid images found in ../dataset/train\Low\PEKOE\PARTICLE
+2025-08-02 11:20:33,222 - INFO - Processed sample ../dataset/train\Low\PEKOE\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,224 - INFO - Processed sample ../dataset/train\Low\PEKOE\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,227 - WARNING - No valid images found in ../dataset/train\Low\PEKOE01\PARTICLE
+2025-08-02 11:20:33,228 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:33,230 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:33,231 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:33,233 - INFO - Processed sample ../dataset/train\Low\PEKOE01\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:33,233 - INFO - Processed 290 images from train directory
+2025-08-02 11:20:33,233 - INFO - Processing test directory: ../dataset/test
+2025-08-02 11:20:33,236 - WARNING - No valid images found in ../dataset/test\High-Medium\BOP\PARTICLE
+2025-08-02 11:20:33,236 - WARNING - No valid images found in ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_01
+2025-08-02 11:20:33,238 - INFO - Processed sample ../dataset/test\High-Medium\BOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,240 - WARNING - No valid images found in ../dataset/test\High-Medium\BOP01\PARTICLE
+2025-08-02 11:20:33,241 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,243 - INFO - Processed sample ../dataset/test\High-Medium\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,246 - WARNING - No valid images found in ../dataset/test\High-Medium\BOPA\PARTICLE
+2025-08-02 11:20:33,248 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,249 - INFO - Processed sample ../dataset/test\High-Medium\BOPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,252 - WARNING - No valid images found in ../dataset/test\High-Medium\BOPF\PARTICLE
+2025-08-02 11:20:33,253 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,254 - INFO - Processed sample ../dataset/test\High-Medium\BOPF\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,256 - WARNING - No valid images found in ../dataset/test\High-Medium\FBOP\PARTICLE
+2025-08-02 11:20:33,257 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,258 - INFO - Processed sample ../dataset/test\High-Medium\FBOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,261 - WARNING - No valid images found in ../dataset/test\High-Medium\OP\PARTICLE
+2025-08-02 11:20:33,262 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,263 - INFO - Processed sample ../dataset/test\High-Medium\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,266 - WARNING - No valid images found in ../dataset/test\High-Medium\OP01\PARTICLE
+2025-08-02 11:20:33,268 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,269 - INFO - Processed sample ../dataset/test\High-Medium\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,271 - WARNING - No valid images found in ../dataset/test\High-Medium\OPA\PARTICLE
+2025-08-02 11:20:33,272 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,274 - INFO - Processed sample ../dataset/test\High-Medium\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,277 - WARNING - No valid images found in ../dataset/test\High-Medium\PEKOE\PARTICLE
+2025-08-02 11:20:33,278 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,280 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,282 - WARNING - No valid images found in ../dataset/test\High-Medium\PEKOE01\PARTICLE
+2025-08-02 11:20:33,284 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,285 - INFO - Processed sample ../dataset/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,287 - WARNING - No valid images found in ../dataset/test\Low\BOP01\PARTICLE
+2025-08-02 11:20:33,288 - INFO - Processed sample ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_01: 2 images
+2025-08-02 11:20:33,289 - INFO - Processed sample ../dataset/test\Low\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,291 - WARNING - No valid images found in ../dataset/test\Low\OP\PARTICLE
+2025-08-02 11:20:33,292 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,294 - INFO - Processed sample ../dataset/test\Low\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,296 - WARNING - No valid images found in ../dataset/test\Low\OP01\PARTICLE
+2025-08-02 11:20:33,297 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,299 - INFO - Processed sample ../dataset/test\Low\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,301 - WARNING - No valid images found in ../dataset/test\Low\OPA\PARTICLE
+2025-08-02 11:20:33,303 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,304 - INFO - Processed sample ../dataset/test\Low\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,307 - WARNING - No valid images found in ../dataset/test\Low\PEKOE\PARTICLE
+2025-08-02 11:20:33,308 - INFO - Processed sample ../dataset/test\Low\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,309 - WARNING - No valid images found in ../dataset/test\Low\PEKOE\PARTICLE\SAMPLE_02
+2025-08-02 11:20:33,311 - WARNING - No valid images found in ../dataset/test\Low\PEKOE01\PARTICLE
+2025-08-02 11:20:33,313 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,314 - INFO - Processed sample ../dataset/test\Low\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,315 - INFO - Processed 119 images from test directory
+2025-08-02 11:20:33,315 - INFO - Processing train_new directory: ../dataset_New/train
+2025-08-02 11:20:33,317 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE
+2025-08-02 11:20:33,318 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01
+2025-08-02 11:20:33,319 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-02 11:20:33,320 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-02 11:20:33,321 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-02 11:20:33,322 - INFO - Processed sample ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02: 3 images
+2025-08-02 11:20:33,323 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_01
+2025-08-02 11:20:33,324 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-02 11:20:33,325 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-02 11:20:33,326 - INFO - Processed sample ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03: 3 images
+2025-08-02 11:20:33,327 - WARNING - No valid images found in ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_01
+2025-08-02 11:20:33,328 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-02 11:20:33,329 - INFO - Processed take ../dataset_New/train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-02 11:20:33,330 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE
+2025-08-02 11:20:33,331 - INFO - Processed sample ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,332 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_01
+2025-08-02 11:20:33,332 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-02 11:20:33,333 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-02 11:20:33,334 - INFO - Processed sample ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02: 3 images
+2025-08-02 11:20:33,335 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_01
+2025-08-02 11:20:33,335 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-02 11:20:33,336 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-02 11:20:33,337 - INFO - Processed sample ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03: 3 images
+2025-08-02 11:20:33,338 - WARNING - No valid images found in ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_01
+2025-08-02 11:20:33,339 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-02 11:20:33,340 - INFO - Processed take ../dataset_New/train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-02 11:20:33,341 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE
+2025-08-02 11:20:33,342 - INFO - Processed sample ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,342 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01\TAKE_01
+2025-08-02 11:20:33,343 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-02 11:20:33,344 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-02 11:20:33,344 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02
+2025-08-02 11:20:33,345 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02\TAKE_01: 3 images
+2025-08-02 11:20:33,347 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-02 11:20:33,348 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-02 11:20:33,349 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03
+2025-08-02 11:20:33,350 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03\TAKE_01: 3 images
+2025-08-02 11:20:33,351 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-02 11:20:33,352 - INFO - Processed take ../dataset_New/train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-02 11:20:33,353 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE
+2025-08-02 11:20:33,354 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01
+2025-08-02 11:20:33,356 - INFO - Processed take ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-02 11:20:33,357 - INFO - Processed take ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-02 11:20:33,359 - INFO - Processed take ../dataset_New/train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-02 11:20:33,360 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE
+2025-08-02 11:20:33,361 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01
+2025-08-02 11:20:33,363 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-02 11:20:33,364 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-02 11:20:33,366 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-02 11:20:33,367 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02
+2025-08-02 11:20:33,368 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02\TAKE_01: 3 images
+2025-08-02 11:20:33,370 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-02 11:20:33,371 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-02 11:20:33,372 - WARNING - No valid images found in ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03
+2025-08-02 11:20:33,373 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03\TAKE_01: 3 images
+2025-08-02 11:20:33,375 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-02 11:20:33,376 - INFO - Processed take ../dataset_New/train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-02 11:20:33,378 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,378 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,380 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,381 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,382 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,383 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,385 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,386 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,387 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,388 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,390 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,391 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,392 - WARNING - Skipping ../dataset_New/train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'BOPFSP_NEW' not in predefined list
+2025-08-02 11:20:33,393 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,394 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,395 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,397 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,398 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,399 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,400 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,401 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,403 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,403 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,404 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,405 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,407 - WARNING - Skipping ../dataset_New/train\Low\BOP_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'BOP_NEW' not in predefined list
+2025-08-02 11:20:33,408 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,409 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,410 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,411 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,412 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,413 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,413 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,414 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,416 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,417 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,418 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,420 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,421 - WARNING - Skipping ../dataset_New/train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'FBOP01_NEW' not in predefined list
+2025-08-02 11:20:33,422 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE
+2025-08-02 11:20:33,423 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01
+2025-08-02 11:20:33,424 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-02 11:20:33,426 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-02 11:20:33,427 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-02 11:20:33,428 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02
+2025-08-02 11:20:33,429 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_01: 3 images
+2025-08-02 11:20:33,431 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-02 11:20:33,433 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-02 11:20:33,433 - WARNING - No valid images found in ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03
+2025-08-02 11:20:33,435 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_01: 3 images
+2025-08-02 11:20:33,435 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-02 11:20:33,436 - INFO - Processed take ../dataset_New/train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_03: 3 images
+2025-08-02 11:20:33,437 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,438 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,439 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,439 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,440 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,440 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,441 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,441 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,442 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,442 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,443 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,443 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,444 - WARNING - Skipping ../dataset_New/train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'FBOPF_NEW' not in predefined list
+2025-08-02 11:20:33,445 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,445 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,447 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01\TAKE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,448 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01\TAKE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,449 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_01\TAKE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,450 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,451 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02\TAKE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,452 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02\TAKE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,453 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_02\TAKE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,453 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,454 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03\TAKE_01: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,455 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03\TAKE_02: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,456 - WARNING - Skipping ../dataset_New/train\Low\FBOP_NEW\PARTICLE\SAMPLE_03\TAKE_03: Tea variant 'FBOP_NEW' not in predefined list
+2025-08-02 11:20:33,456 - INFO - Processed 144 images from train_new directory
+2025-08-02 11:20:33,457 - INFO - Processing test_new directory: ../dataset_New/test
+2025-08-02 11:20:33,459 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOP\PARTICLE
+2025-08-02 11:20:33,460 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,461 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,463 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOP01\PARTICLE
+2025-08-02 11:20:33,464 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,466 - INFO - Processed sample ../dataset_New/test\High-Medium\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,467 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOPA\PARTICLE
+2025-08-02 11:20:33,468 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,469 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,471 - WARNING - No valid images found in ../dataset_New/test\High-Medium\BOPF\PARTICLE
+2025-08-02 11:20:33,471 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,472 - INFO - Processed sample ../dataset_New/test\High-Medium\BOPF\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,473 - WARNING - No valid images found in ../dataset_New/test\High-Medium\FBOP\PARTICLE
+2025-08-02 11:20:33,474 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,475 - INFO - Processed sample ../dataset_New/test\High-Medium\FBOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,476 - WARNING - No valid images found in ../dataset_New/test\High-Medium\OP\PARTICLE
+2025-08-02 11:20:33,478 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,479 - INFO - Processed sample ../dataset_New/test\High-Medium\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,481 - WARNING - No valid images found in ../dataset_New/test\High-Medium\OP01\PARTICLE
+2025-08-02 11:20:33,482 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,483 - INFO - Processed sample ../dataset_New/test\High-Medium\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,485 - WARNING - No valid images found in ../dataset_New/test\High-Medium\OPA\PARTICLE
+2025-08-02 11:20:33,486 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,487 - INFO - Processed sample ../dataset_New/test\High-Medium\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,488 - WARNING - No valid images found in ../dataset_New/test\High-Medium\PEKOE\PARTICLE
+2025-08-02 11:20:33,489 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,490 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,492 - WARNING - No valid images found in ../dataset_New/test\High-Medium\PEKOE01\PARTICLE
+2025-08-02 11:20:33,494 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,495 - INFO - Processed sample ../dataset_New/test\High-Medium\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,498 - WARNING - No valid images found in ../dataset_New/test\Low\BOP01\PARTICLE
+2025-08-02 11:20:33,499 - INFO - Processed sample ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_01: 2 images
+2025-08-02 11:20:33,500 - INFO - Processed sample ../dataset_New/test\Low\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,501 - WARNING - No valid images found in ../dataset_New/test\Low\OP\PARTICLE
+2025-08-02 11:20:33,503 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,504 - INFO - Processed sample ../dataset_New/test\Low\OP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,505 - WARNING - No valid images found in ../dataset_New/test\Low\OP01\PARTICLE
+2025-08-02 11:20:33,507 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,508 - INFO - Processed sample ../dataset_New/test\Low\OP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,510 - WARNING - No valid images found in ../dataset_New/test\Low\OPA\PARTICLE
+2025-08-02 11:20:33,511 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,512 - INFO - Processed sample ../dataset_New/test\Low\OPA\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,514 - WARNING - No valid images found in ../dataset_New/test\Low\PEKOE\PARTICLE
+2025-08-02 11:20:33,515 - INFO - Processed sample ../dataset_New/test\Low\PEKOE\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,516 - WARNING - No valid images found in ../dataset_New/test\Low\PEKOE01\PARTICLE
+2025-08-02 11:20:33,517 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:33,518 - INFO - Processed sample ../dataset_New/test\Low\PEKOE01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:33,519 - INFO - Processed 122 images from test_new directory
+2025-08-02 11:20:33,540 - WARNING - Removed 119 duplicate entries
+2025-08-02 11:20:33,551 - INFO - Successfully created labels.csv with 556 entries
+2025-08-02 11:20:33,556 - INFO - Tea variants found: ['BOP', 'BOP01', 'BOPA', 'BOPF', 'BOPSP_NEW', 'FBOP', 'FBOPF01_NEW', 'OP', 'OP01', 'OP01_NEW', 'OPA', 'OPA_NEW', 'OP_NEW', 'PEKOE', 'PEKOE01']
+2025-08-02 11:20:33,557 - INFO - Elevations found: ['High-Medium', 'Low']
+2025-08-02 11:20:33,557 - INFO - Dataset types: ['test', 'test_new', 'train', 'train_new']
+2025-08-02 11:20:33,558 - INFO - Saved labels.csv to ../dataset/labels.csv

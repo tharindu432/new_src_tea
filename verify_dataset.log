@@ -1,19 +1,448 @@
-2025-08-01 23:36:14,151 - INFO - Starting comprehensive dataset verification
-2025-08-01 23:36:14,151 - INFO - Project root: C:\L4S1\PythonProject2
-2025-08-01 23:36:14,152 - INFO - ============================================================
-2025-08-01 23:36:14,152 - INFO - Checking train: C:\L4S1\PythonProject2\dataset\train
-2025-08-01 23:36:14,153 - INFO - ============================================================
-2025-08-01 23:36:14,153 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset\train
-2025-08-01 23:36:14,154 - INFO - ============================================================
-2025-08-01 23:36:14,155 - INFO - Checking test: C:\L4S1\PythonProject2\dataset\test
-2025-08-01 23:36:14,155 - INFO - ============================================================
-2025-08-01 23:36:14,155 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset\test
-2025-08-01 23:36:14,155 - INFO - ============================================================
-2025-08-01 23:36:14,155 - INFO - Checking train_new: C:\L4S1\PythonProject2\dataset_New\train
-2025-08-01 23:36:14,155 - INFO - ============================================================
-2025-08-01 23:36:14,157 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset_New\train
-2025-08-01 23:36:14,158 - INFO - ============================================================
-2025-08-01 23:36:14,158 - INFO - Checking test_new: C:\L4S1\PythonProject2\dataset_New\test
-2025-08-01 23:36:14,159 - INFO - ============================================================
-2025-08-01 23:36:14,159 - ERROR - Directory does not exist: C:\L4S1\PythonProject2\dataset_New\test
-2025-08-01 23:36:14,159 - ERROR - No valid datasets found! Please check your dataset directories.
+2025-08-02 11:20:54,137 - INFO - Starting comprehensive dataset verification
+2025-08-02 11:20:54,138 - INFO - Project root: C:\L4S1\PythonProject2
+2025-08-02 11:20:54,139 - INFO - ============================================================
+2025-08-02 11:20:54,139 - INFO - Checking train: C:\L4S1\PythonProject2\dataset\train
+2025-08-02 11:20:54,139 - INFO - ============================================================
+2025-08-02 11:20:54,175 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,176 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,177 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,178 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,180 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,181 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,181 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,182 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,184 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,185 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,185 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,186 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,187 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,188 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,189 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,190 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,192 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,192 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,193 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,194 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,196 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,197 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,199 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,200 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,201 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,203 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,203 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,204 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,206 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,207 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,208 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,209 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,211 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,211 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,212 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,213 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,214 - INFO - Found sample SAMPLE_07 with 5 images
+2025-08-02 11:20:54,216 - WARNING - Sample C:\L4S1\PythonProject2\dataset\train\Low\BOP01\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,217 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,218 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,219 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,220 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,221 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,222 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,222 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,224 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,225 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,226 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,226 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,228 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,229 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,230 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,231 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,233 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,234 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,236 - INFO - Found sample SAMPLE_03 with 5 images
+2025-08-02 11:20:54,237 - INFO - Found sample SAMPLE_04 with 5 images
+2025-08-02 11:20:54,238 - INFO - Found sample SAMPLE_05 with 5 images
+2025-08-02 11:20:54,239 - INFO - Found sample SAMPLE_06 with 5 images
+2025-08-02 11:20:54,239 - INFO - Found 58 sample groups in C:\L4S1\PythonProject2\dataset\train
+2025-08-02 11:20:54,239 - INFO - Sample groups found: 58
+2025-08-02 11:20:54,240 - INFO -   Sample 1: SAMPLE_03 (5 images)
+2025-08-02 11:20:54,240 - INFO -   Sample 2: SAMPLE_04 (5 images)
+2025-08-02 11:20:54,241 - INFO -   Sample 3: SAMPLE_05 (5 images)
+2025-08-02 11:20:54,241 - INFO -   Sample 4: SAMPLE_06 (5 images)
+2025-08-02 11:20:54,241 - INFO -   Sample 5: SAMPLE_03 (5 images)
+2025-08-02 11:20:54,242 - INFO - Summary for train:
+2025-08-02 11:20:54,242 - INFO -   Total images: 381
+2025-08-02 11:20:54,242 - INFO -   Total samples: 58
+2025-08-02 11:20:54,242 - INFO -   Elevations found: ['High-Medium', 'Low']
+2025-08-02 11:20:54,243 - INFO -   Tea variants found: ['BOP', 'BOP01', 'BOPA', 'BOPF', 'FBOP', 'OP', 'OP01', 'OPA', 'PEKOE', 'PEKOE01']
+2025-08-02 11:20:54,243 - INFO -   Samples by tea variant:
+2025-08-02 11:20:54,243 - INFO -     BOP: 4 samples, 26 images
+2025-08-02 11:20:54,243 - INFO -     BOP01: 7 samples, 48 images
+2025-08-02 11:20:54,243 - INFO -     BOPA: 4 samples, 27 images
+2025-08-02 11:20:54,243 - INFO -     BOPF: 4 samples, 26 images
+2025-08-02 11:20:54,244 - INFO -     FBOP: 4 samples, 26 images
+2025-08-02 11:20:54,244 - INFO -     OP: 8 samples, 51 images
+2025-08-02 11:20:54,244 - INFO -     OP01: 8 samples, 52 images
+2025-08-02 11:20:54,244 - INFO -     OPA: 8 samples, 52 images
+2025-08-02 11:20:54,245 - INFO -     PEKOE: 7 samples, 47 images
+2025-08-02 11:20:54,245 - INFO -     PEKOE01: 4 samples, 26 images
+2025-08-02 11:20:54,245 - INFO -   Directory structure (sample):
+2025-08-02 11:20:54,246 - INFO -     High-Medium\BOP\INFUSION: 3 images
+2025-08-02 11:20:54,246 - INFO -     High-Medium\BOP\LIQUID: 3 images
+2025-08-02 11:20:54,246 - INFO -     High-Medium\BOP\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:54,246 - INFO -     High-Medium\BOP\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:54,247 - INFO -     High-Medium\BOP\PARTICLE\SAMPLE_05: 5 images
+2025-08-02 11:20:54,247 - INFO -     High-Medium\BOP\PARTICLE\SAMPLE_06: 5 images
+2025-08-02 11:20:54,247 - INFO -     High-Medium\BOP01\INFUSION: 4 images
+2025-08-02 11:20:54,247 - INFO -     High-Medium\BOP01\LIQUID: 3 images
+2025-08-02 11:20:54,248 - INFO -     High-Medium\BOP01\PARTICLE\SAMPLE_03: 5 images
+2025-08-02 11:20:54,248 - INFO -     High-Medium\BOP01\PARTICLE\SAMPLE_04: 5 images
+2025-08-02 11:20:54,248 - INFO -     ... and 78 more directories
+2025-08-02 11:20:54,249 - INFO - ============================================================
+2025-08-02 11:20:54,249 - INFO - Checking test: C:\L4S1\PythonProject2\dataset\test
+2025-08-02 11:20:54,249 - INFO - ============================================================
+2025-08-02 11:20:54,277 - WARNING - Sample C:\L4S1\PythonProject2\dataset\test\High-Medium\BOP\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,278 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,279 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,280 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,282 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,283 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,285 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,285 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,287 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,288 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,290 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,291 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,293 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,293 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,295 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,296 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,297 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,298 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,300 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,301 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,302 - INFO - Found sample SAMPLE_01 with 2 images
+2025-08-02 11:20:54,303 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,306 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,307 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,310 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,311 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,313 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,314 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,315 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,316 - WARNING - Sample C:\L4S1\PythonProject2\dataset\test\Low\PEKOE\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,317 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,318 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,319 - INFO - Found 30 sample groups in C:\L4S1\PythonProject2\dataset\test
+2025-08-02 11:20:54,319 - INFO - Sample groups found: 30
+2025-08-02 11:20:54,319 - INFO -   Sample 1: SAMPLE_02 (5 images)
+2025-08-02 11:20:54,319 - INFO -   Sample 2: SAMPLE_01 (3 images)
+2025-08-02 11:20:54,320 - INFO -   Sample 3: SAMPLE_02 (5 images)
+2025-08-02 11:20:54,320 - INFO -   Sample 4: SAMPLE_01 (3 images)
+2025-08-02 11:20:54,321 - INFO -   Sample 5: SAMPLE_02 (5 images)
+2025-08-02 11:20:54,321 - INFO - Summary for test:
+2025-08-02 11:20:54,321 - INFO -   Total images: 216
+2025-08-02 11:20:54,322 - INFO -   Total samples: 30
+2025-08-02 11:20:54,322 - INFO -   Elevations found: ['High-Medium', 'Low']
+2025-08-02 11:20:54,323 - INFO -   Tea variants found: ['BOP', 'BOP01', 'BOPA', 'BOPF', 'FBOP', 'OP', 'OP01', 'OPA', 'PEKOE', 'PEKOE01']
+2025-08-02 11:20:54,323 - INFO -   Samples by tea variant:
+2025-08-02 11:20:54,323 - INFO -     BOP: 1 samples, 11 images
+2025-08-02 11:20:54,324 - INFO -     BOP01: 4 samples, 28 images
+2025-08-02 11:20:54,324 - INFO -     BOPA: 2 samples, 15 images
+2025-08-02 11:20:54,324 - INFO -     BOPF: 2 samples, 14 images
+2025-08-02 11:20:54,324 - INFO -     FBOP: 2 samples, 14 images
+2025-08-02 11:20:54,324 - INFO -     OP: 4 samples, 27 images
+2025-08-02 11:20:54,325 - INFO -     OP01: 4 samples, 28 images
+2025-08-02 11:20:54,325 - INFO -     OPA: 4 samples, 28 images
+2025-08-02 11:20:54,325 - INFO -     PEKOE: 3 samples, 23 images
+2025-08-02 11:20:54,325 - INFO -     PEKOE01: 4 samples, 28 images
+2025-08-02 11:20:54,325 - INFO -   Directory structure (sample):
+2025-08-02 11:20:54,326 - INFO -     High-Medium\BOP\INFUSION: 3 images
+2025-08-02 11:20:54,326 - INFO -     High-Medium\BOP\LIQUID: 3 images
+2025-08-02 11:20:54,326 - INFO -     High-Medium\BOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:54,326 - INFO -     High-Medium\BOP01\INFUSION: 4 images
+2025-08-02 11:20:54,327 - INFO -     High-Medium\BOP01\LIQUID: 3 images
+2025-08-02 11:20:54,327 - INFO -     High-Medium\BOP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:54,327 - INFO -     High-Medium\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:54,327 - INFO -     High-Medium\BOPA\INFUSION: 3 images
+2025-08-02 11:20:54,327 - INFO -     High-Medium\BOPA\LIQUID: 4 images
+2025-08-02 11:20:54,328 - INFO -     High-Medium\BOPA\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:54,328 - INFO -     ... and 52 more directories
+2025-08-02 11:20:54,328 - INFO - ============================================================
+2025-08-02 11:20:54,328 - INFO - Checking train_new: C:\L4S1\PythonProject2\dataset_New\train
+2025-08-02 11:20:54,328 - INFO - ============================================================
+2025-08-02 11:20:54,397 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,398 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,399 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,400 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,401 - INFO - Found sample SAMPLE_02 with 3 images
+2025-08-02 11:20:54,401 - WARNING - Take C:\L4S1\PythonProject2\dataset_New\train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_01 has no valid images
+2025-08-02 11:20:54,402 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,403 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,404 - INFO - Found sample SAMPLE_03 with 3 images
+2025-08-02 11:20:54,404 - WARNING - Take C:\L4S1\PythonProject2\dataset_New\train\High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_01 has no valid images
+2025-08-02 11:20:54,405 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,406 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,407 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,408 - WARNING - Take C:\L4S1\PythonProject2\dataset_New\train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_01\TAKE_01 has no valid images
+2025-08-02 11:20:54,409 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,409 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,410 - INFO - Found sample SAMPLE_02 with 3 images
+2025-08-02 11:20:54,410 - WARNING - Take C:\L4S1\PythonProject2\dataset_New\train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_02\TAKE_01 has no valid images
+2025-08-02 11:20:54,411 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,412 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,413 - INFO - Found sample SAMPLE_03 with 3 images
+2025-08-02 11:20:54,413 - WARNING - Take C:\L4S1\PythonProject2\dataset_New\train\High-Medium\FBOPF01_NEW\PARTICLE\SAMPLE_03\TAKE_01 has no valid images
+2025-08-02 11:20:54,414 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,415 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,416 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,417 - WARNING - Take C:\L4S1\PythonProject2\dataset_New\train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_01\TAKE_01 has no valid images
+2025-08-02 11:20:54,417 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,418 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,418 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,419 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,420 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,420 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,421 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\High-Medium\OP01_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,421 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,422 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,423 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,424 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\High-Medium\OPA_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,425 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,426 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,427 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,428 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\High-Medium\OP_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,429 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,429 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,430 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,431 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\High-Medium\OP_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,432 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,433 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,434 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,434 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\High-Medium\OP_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,435 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,435 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,436 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,437 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,438 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,439 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,439 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,440 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,440 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,441 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,441 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,442 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\BOPFSP_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,442 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,443 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,444 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,445 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\BOP_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,445 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,446 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,447 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,448 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\BOP_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,449 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,449 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,450 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,451 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\BOP_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,452 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,452 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,453 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,455 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOP01_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,455 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,456 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,457 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,458 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOP01_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,458 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,459 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,460 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,460 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOP01_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,461 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,462 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,463 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,465 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,465 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,466 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,467 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,467 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,468 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,469 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,469 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,470 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOPF01_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,470 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,471 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,471 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,472 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOPF_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,473 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,473 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,474 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,474 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOPF_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,475 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,475 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,476 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,476 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOPF_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,477 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,477 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,478 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,480 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOP_NEW\PARTICLE\SAMPLE_01 has no valid images
+2025-08-02 11:20:54,480 - INFO - Found take SAMPLE_01_TAKE_01 with 3 images
+2025-08-02 11:20:54,481 - INFO - Found take SAMPLE_01_TAKE_02 with 3 images
+2025-08-02 11:20:54,482 - INFO - Found take SAMPLE_01_TAKE_03 with 3 images
+2025-08-02 11:20:54,483 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOP_NEW\PARTICLE\SAMPLE_02 has no valid images
+2025-08-02 11:20:54,484 - INFO - Found take SAMPLE_02_TAKE_01 with 3 images
+2025-08-02 11:20:54,485 - INFO - Found take SAMPLE_02_TAKE_02 with 3 images
+2025-08-02 11:20:54,486 - INFO - Found take SAMPLE_02_TAKE_03 with 3 images
+2025-08-02 11:20:54,486 - WARNING - Sample C:\L4S1\PythonProject2\dataset_New\train\Low\FBOP_NEW\PARTICLE\SAMPLE_03 has no valid images
+2025-08-02 11:20:54,487 - INFO - Found take SAMPLE_03_TAKE_01 with 3 images
+2025-08-02 11:20:54,487 - INFO - Found take SAMPLE_03_TAKE_02 with 3 images
+2025-08-02 11:20:54,488 - INFO - Found take SAMPLE_03_TAKE_03 with 3 images
+2025-08-02 11:20:54,488 - INFO - Found 93 sample groups in C:\L4S1\PythonProject2\dataset_New\train
+2025-08-02 11:20:54,488 - INFO - Sample groups found: 93
+2025-08-02 11:20:54,489 - INFO -   Sample 1: SAMPLE_01_TAKE_01 (3 images)
+2025-08-02 11:20:54,489 - INFO -   Sample 2: SAMPLE_01_TAKE_02 (3 images)
+2025-08-02 11:20:54,489 - INFO -   Sample 3: SAMPLE_01_TAKE_03 (3 images)
+2025-08-02 11:20:54,490 - INFO -   Sample 4: SAMPLE_02 (3 images)
+2025-08-02 11:20:54,490 - INFO -   Sample 5: SAMPLE_02_TAKE_02 (3 images)
+2025-08-02 11:20:54,490 - INFO - Summary for train_new:
+2025-08-02 11:20:54,490 - INFO -   Total images: 345
+2025-08-02 11:20:54,491 - INFO -   Total samples: 93
+2025-08-02 11:20:54,491 - INFO -   Elevations found: ['High-Medium', 'Low']
+2025-08-02 11:20:54,491 - INFO -   Tea variants found: ['BOPSP_NEW', 'FBOPF01_NEW', 'OP01_NEW', 'OPA_NEW', 'OP_NEW']
+2025-08-02 11:20:54,491 - INFO -   Samples by tea variant:
+2025-08-02 11:20:54,492 - INFO -     BOPSP_NEW: 9 samples, 33 images
+2025-08-02 11:20:54,492 - INFO -     FBOPF01_NEW: 18 samples, 66 images
+2025-08-02 11:20:54,492 - INFO -     OP01_NEW: 9 samples, 33 images
+2025-08-02 11:20:54,493 - INFO -     OPA_NEW: 3 samples, 15 images
+2025-08-02 11:20:54,493 - INFO -     OP_NEW: 9 samples, 33 images
+2025-08-02 11:20:54,493 - INFO -   Directory structure (sample):
+2025-08-02 11:20:54,493 - INFO -     High-Medium\BOPSP_NEW\INFUSION: 3 images
+2025-08-02 11:20:54,494 - INFO -     High-Medium\BOPSP_NEW\LIQUID: 3 images
+2025-08-02 11:20:54,494 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_01: 3 images
+2025-08-02 11:20:54,494 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_02: 3 images
+2025-08-02 11:20:54,495 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_01\TAKE_03: 3 images
+2025-08-02 11:20:54,495 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02: 3 images
+2025-08-02 11:20:54,495 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_02: 3 images
+2025-08-02 11:20:54,496 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_02\TAKE_03: 3 images
+2025-08-02 11:20:54,496 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03: 3 images
+2025-08-02 11:20:54,496 - INFO -     High-Medium\BOPSP_NEW\PARTICLE\SAMPLE_03\TAKE_02: 3 images
+2025-08-02 11:20:54,496 - INFO -     ... and 105 more directories
+2025-08-02 11:20:54,496 - INFO - ============================================================
+2025-08-02 11:20:54,497 - INFO - Checking test_new: C:\L4S1\PythonProject2\dataset_New\test
+2025-08-02 11:20:54,497 - INFO - ============================================================
+2025-08-02 11:20:54,526 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,527 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,528 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,529 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,530 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,531 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,533 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,534 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,536 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,536 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,538 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,539 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,540 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,541 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,543 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,543 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,545 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,545 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,547 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,548 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,550 - INFO - Found sample SAMPLE_01 with 2 images
+2025-08-02 11:20:54,550 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,552 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,552 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,554 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,555 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,556 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,558 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,560 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,562 - INFO - Found sample SAMPLE_01 with 3 images
+2025-08-02 11:20:54,562 - INFO - Found sample SAMPLE_02 with 5 images
+2025-08-02 11:20:54,563 - INFO - Found 31 sample groups in C:\L4S1\PythonProject2\dataset_New\test
+2025-08-02 11:20:54,563 - INFO - Sample groups found: 31
+2025-08-02 11:20:54,564 - INFO -   Sample 1: SAMPLE_01 (3 images)
+2025-08-02 11:20:54,564 - INFO -   Sample 2: SAMPLE_02 (5 images)
+2025-08-02 11:20:54,564 - INFO -   Sample 3: SAMPLE_01 (3 images)
+2025-08-02 11:20:54,565 - INFO -   Sample 4: SAMPLE_02 (5 images)
+2025-08-02 11:20:54,565 - INFO -   Sample 5: SAMPLE_01 (3 images)
+2025-08-02 11:20:54,565 - INFO - Summary for test_new:
+2025-08-02 11:20:54,566 - INFO -   Total images: 219
+2025-08-02 11:20:54,566 - INFO -   Total samples: 31
+2025-08-02 11:20:54,566 - INFO -   Elevations found: ['High-Medium', 'Low']
+2025-08-02 11:20:54,567 - INFO -   Tea variants found: ['BOP', 'BOP01', 'BOPA', 'BOPF', 'FBOP', 'OP', 'OP01', 'OPA', 'PEKOE', 'PEKOE01']
+2025-08-02 11:20:54,567 - INFO -   Samples by tea variant:
+2025-08-02 11:20:54,567 - INFO -     BOP: 2 samples, 14 images
+2025-08-02 11:20:54,568 - INFO -     BOP01: 4 samples, 28 images
+2025-08-02 11:20:54,568 - INFO -     BOPA: 2 samples, 15 images
+2025-08-02 11:20:54,569 - INFO -     BOPF: 2 samples, 14 images
+2025-08-02 11:20:54,569 - INFO -     FBOP: 2 samples, 14 images
+2025-08-02 11:20:54,569 - INFO -     OP: 4 samples, 27 images
+2025-08-02 11:20:54,569 - INFO -     OP01: 4 samples, 28 images
+2025-08-02 11:20:54,570 - INFO -     OPA: 4 samples, 28 images
+2025-08-02 11:20:54,570 - INFO -     PEKOE: 3 samples, 23 images
+2025-08-02 11:20:54,570 - INFO -     PEKOE01: 4 samples, 28 images
+2025-08-02 11:20:54,570 - INFO -   Directory structure (sample):
+2025-08-02 11:20:54,570 - INFO -     High-Medium\BOP\INFUSION: 3 images
+2025-08-02 11:20:54,571 - INFO -     High-Medium\BOP\LIQUID: 3 images
+2025-08-02 11:20:54,571 - INFO -     High-Medium\BOP\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:54,571 - INFO -     High-Medium\BOP\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:54,572 - INFO -     High-Medium\BOP01\INFUSION: 4 images
+2025-08-02 11:20:54,572 - INFO -     High-Medium\BOP01\LIQUID: 3 images
+2025-08-02 11:20:54,572 - INFO -     High-Medium\BOP01\PARTICLE\SAMPLE_01: 3 images
+2025-08-02 11:20:54,572 - INFO -     High-Medium\BOP01\PARTICLE\SAMPLE_02: 5 images
+2025-08-02 11:20:54,573 - INFO -     High-Medium\BOPA\INFUSION: 3 images
+2025-08-02 11:20:54,573 - INFO -     High-Medium\BOPA\LIQUID: 4 images
+2025-08-02 11:20:54,573 - INFO -     ... and 53 more directories
+2025-08-02 11:20:54,573 - INFO - Found 4 valid datasets: ['train', 'test', 'train_new', 'test_new']
+2025-08-02 11:20:54,573 - INFO - ============================================================
+2025-08-02 11:20:54,574 - INFO - Verifying labels file: C:\L4S1\PythonProject2\dataset/labels.csv
+2025-08-02 11:20:54,574 - INFO - ============================================================
+2025-08-02 11:20:54,574 - INFO - Labels file size: 44044 bytes
+2025-08-02 11:20:54,589 - INFO - Labels loaded successfully: 556 entries
+2025-08-02 11:20:54,593 - INFO - Labels file analysis:
+2025-08-02 11:20:54,593 - INFO -   Columns: ['filename', 'tea_variant', 'elevation', 'dataset_type']
+2025-08-02 11:20:54,599 - INFO -   Tea variants: ['BOP', 'BOP01', 'BOPA', 'BOPF', 'BOPSP_NEW', 'FBOP', 'FBOPF01_NEW', 'OP', 'OP01', 'OP01_NEW', 'OPA', 'OPA_NEW', 'OP_NEW', 'PEKOE', 'PEKOE01']
+2025-08-02 11:20:54,600 - INFO -   Elevations: ['High-Medium', 'Low']
+2025-08-02 11:20:54,608 - INFO - Sample entries from labels.csv:
+2025-08-02 11:20:54,610 - INFO -   1: High-Medium/BOP/PARTICLE/SAMPLE_03/20240118_134527.jpg -> BOP_High-Medium
+2025-08-02 11:20:54,611 - INFO -   2: High-Medium/BOP/PARTICLE/SAMPLE_03/20240118_134528.jpg -> BOP_High-Medium
+2025-08-02 11:20:54,611 - INFO -   3: High-Medium/BOP/PARTICLE/SAMPLE_03/20240118_134529.jpg -> BOP_High-Medium
+2025-08-02 11:20:54,612 - INFO -   4: High-Medium/BOP/PARTICLE/SAMPLE_03/20240118_134530.jpg -> BOP_High-Medium
+2025-08-02 11:20:54,613 - INFO -   5: High-Medium/BOP/PARTICLE/SAMPLE_03/20240118_134531.jpg -> BOP_High-Medium
+2025-08-02 11:20:54,613 - INFO - ============================================================
+2025-08-02 11:20:54,613 - INFO - Cross-referencing labels with datasets
+2025-08-02 11:20:54,614 - INFO - ============================================================
+2025-08-02 11:20:54,614 - INFO - Scanning train dataset...
+2025-08-02 11:20:54,662 - INFO - Scanning test dataset...
+2025-08-02 11:20:54,696 - INFO - Scanning train_new dataset...
+2025-08-02 11:20:54,751 - INFO - Scanning test_new dataset...
+2025-08-02 11:20:54,782 - INFO - Found 854 actual image files across all datasets
+2025-08-02 11:20:54,786 - INFO - Found 556 entries in labels.csv
+2025-08-02 11:20:54,787 - INFO - Cross-reference results:
+2025-08-02 11:20:54,787 - INFO -   Files in both labels and datasets: 556
+2025-08-02 11:20:54,788 - INFO -   Files in datasets but missing in labels: 298
+2025-08-02 11:20:54,788 - INFO -   Files in labels but missing in datasets: 0
+2025-08-02 11:20:54,788 - WARNING - Sample files missing from labels.csv:
+2025-08-02 11:20:54,789 - WARNING -   High-Medium/BOP/INFUSION/20240118_152804.jpg
+2025-08-02 11:20:54,789 - WARNING -   High-Medium/BOP/INFUSION/20240118_152805.jpg
+2025-08-02 11:20:54,790 - WARNING -   High-Medium/BOP/INFUSION/20240118_152806.jpg
+2025-08-02 11:20:54,790 - WARNING -   High-Medium/BOP/LIQUID/20240118_145626.jpg
+2025-08-02 11:20:54,790 - WARNING -   High-Medium/BOP/LIQUID/20240118_145627.jpg
+2025-08-02 11:20:54,790 - WARNING -   High-Medium/BOP/LIQUID/20240118_145628(0).jpg
+2025-08-02 11:20:54,791 - WARNING -   High-Medium/BOP01/INFUSION/20240118_151851.jpg
+2025-08-02 11:20:54,791 - WARNING -   High-Medium/BOP01/INFUSION/20240118_152004.jpg
+2025-08-02 11:20:54,792 - WARNING -   High-Medium/BOP01/INFUSION/20240118_152005.jpg
+2025-08-02 11:20:54,792 - WARNING -   High-Medium/BOP01/INFUSION/20240118_152006(0).jpg
+2025-08-02 11:20:54,792 - WARNING -   ... and 288 more
+2025-08-02 11:20:54,792 - INFO - Label-to-dataset match rate: 100.0%
+2025-08-02 11:20:54,793 - INFO - ============================================================
+2025-08-02 11:20:54,793 - INFO - VERIFICATION SUMMARY
+2025-08-02 11:20:54,794 - INFO - ============================================================
+2025-08-02 11:20:54,794 - INFO - Datasets status:
+2025-08-02 11:20:54,869 - INFO - Labels file status:
+2025-08-02 11:20:54,871 - INFO - Cross-reference status:
+2025-08-02 11:20:54,871 - INFO -   Match rate: 100.0%
+2025-08-02 11:20:54,872 - INFO -   Matching files: 556
+2025-08-02 11:20:54,872 - INFO -   Missing in labels: 298
+2025-08-02 11:20:54,872 - INFO -   Missing in datasets: 0
+2025-08-02 11:20:54,875 - INFO - Verification complete. Check verify_dataset.log for detailed results.
