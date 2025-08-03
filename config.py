@@ -27,6 +27,15 @@ class Config:
     SEGMENTATION_DIR = os.path.join(OUTPUT_DIR, "segmented_images")
     OVERLAP_DIR = os.path.join(OUTPUT_DIR, "overlap_analysis")
 
+    # Processing limits - REDUCED FOR EFFICIENCY
+    MAX_SAMPLES_DETAILED_ANALYSIS = 20  # Limit detailed analysis to 20 samples
+    MAX_SAMPLES_SEGMENTATION = 10  # Limit segmentation visualization to 10 samples
+    MAX_SAMPLES_OVERLAP = 15  # Limit overlap analysis to 15 samples
+    MAX_SAMPLES_SHAPE_ANALYSIS = 12  # Limit shape analysis to 12 samples
+
+    # But use all samples for feature extraction and training
+    USE_ALL_SAMPLES_FOR_TRAINING = True
+
     # Segmentation parameters
     MIN_CONTOUR_AREA = 50  # Minimum contour area for valid particles
     MAX_CONTOUR_AREA = 10000  # Maximum contour area to filter noise

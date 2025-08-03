@@ -1,14 +1,12 @@
 import cv2
 import numpy as np
 import os
+import logging
 import matplotlib.pyplot as plt
-from scipy.signal import find_peaks
 from sklearn.cluster import KMeans, DBSCAN
 from sklearn.preprocessing import StandardScaler
-import logging
 from config import Config
-from utils import load_image
-from segmentation import ParticleSegmentation
+import pandas as pd
 
 
 class OverlapAnalyzer:
@@ -16,494 +14,379 @@ class OverlapAnalyzer:
 
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-        self.segmenter = ParticleSegmentation()
 
-    def detect_histogram_peaks(self, image):
+    def analyze_contour_overlap(self, contours):
         """
-        Detect intensity peaks in image histogram for overlap estimation.
-        """
-        try:
-            # Calculate histogram
-            hist, bins = np.histogram(image.ravel(), bins=Config.HISTOGRAM_BINS, range=(0, 255))
-
-            # Smooth histogram to reduce noise
-            from scipy.ndimage import gaussian_filter1d
-            smoothed_hist = gaussian_filter1d(hist, sigma=2)
-
-            # Find peaks
-            peaks, properties = find_peaks(
-                smoothed_hist,
-                height=Config.MIN_PEAK_HEIGHT,
-                distance=Config.MIN_PEAK_DISTANCE,
-                prominence=20
-            )
-
-            return peaks, smoothed_hist, properties
-
-        except Exception as e:
-            self.logger.error(f"Error detecting histogram peaks: {str(e)}")
-            return [], [], {}
-
-    def cluster_contours_kmeans(self, contours):
-        """
-        Cluster contours using K-Means to identify overlapping regions.
+        Analyze potential overlaps between contours based on spatial proximity and size.
         """
         try:
-            if not contours or len(contours) < 2:
-                return []
+            if len(contours) < 2:
+                return 0, []
 
-            # Extract contour features
-            features = []
-            valid_contours = []
+            overlap_count = 0
+            overlap_pairs = []
 
-            for contour in contours:
-                # Calculate moments
+            # Calculate bounding rectangles and centroids
+            contour_info = []
+            for i, contour in enumerate(contours):
+                area = cv2.contourArea(contour)
+                if area < Config.MIN_CONTOUR_AREA:
+                    continue
+
+                x, y, w, h = cv2.boundingRect(contour)
                 M = cv2.moments(contour)
                 if M["m00"] != 0:
-                    cx = int(M["m10"] / M["m00"])
-                    cy = int(M["m01"] / M["m00"])
-                    area = cv2.contourArea(contour)
-                    perimeter = cv2.arcLength(contour, True)
+                    cx = M["m10"] / M["m00"]
+                    cy = M["m01"] / M["m00"]
+                else:
+                    cx, cy = x + w / 2, y + h / 2
 
-                    # Avoid division by zero
-                    if perimeter > 0:
-                        circularity = 4 * np.pi * area / (perimeter * perimeter)
-                    else:
-                        circularity = 0
+                contour_info.append({
+                    'index': i,
+                    'contour': contour,
+                    'area': area,
+                    'bbox': (x, y, w, h),
+                    'centroid': (cx, cy),
+                    'perimeter': cv2.arcLength(contour, True)
+                })
 
-                    features.append([cx, cy, area, perimeter, circularity])
-                    valid_contours.append(contour)
+            # Check for overlaps
+            for i in range(len(contour_info)):
+                for j in range(i + 1, len(contour_info)):
+                    info1, info2 = contour_info[i], contour_info[j]
 
-            if len(features) < 2:
-                return []
+                    # Distance between centroids
+                    dist = np.sqrt((info1['centroid'][0] - info2['centroid'][0]) ** 2 +
+                                   (info1['centroid'][1] - info2['centroid'][1]) ** 2)
+
+                    # Expected separation based on particle sizes
+                    avg_size = np.sqrt((info1['area'] + info2['area']) / (2 * np.pi))
+
+                    # Check if particles are too close (potential overlap)
+                    if dist < avg_size * 1.2:  # Overlap threshold
+                        # Additional checks for actual overlap
+                        if self.check_bbox_overlap(info1['bbox'], info2['bbox']):
+                            overlap_count += 1
+                            overlap_pairs.append((i, j))
+
+                    # Check for unusually large particles (potential multiple particles)
+                    if info1['area'] > Config.AVG_PARTICLE_AREA * 2:
+                        # Analyze if this could be multiple overlapping particles
+                        if self.analyze_large_particle(info1['contour']):
+                            overlap_count += 1
+
+            return overlap_count, overlap_pairs
+
+        except Exception as e:
+            self.logger.error(f"Error analyzing contour overlap: {str(e)}")
+            return 0, []
+
+    def check_bbox_overlap(self, bbox1, bbox2):
+        """Check if two bounding boxes overlap."""
+        x1, y1, w1, h1 = bbox1
+        x2, y2, w2, h2 = bbox2
+
+        return not (x1 + w1 < x2 or x2 + w2 < x1 or y1 + h1 < y2 or y2 + h2 < y1)
+
+    def analyze_large_particle(self, contour):
+        """Analyze if a large contour might contain multiple overlapping particles."""
+        try:
+            # Calculate shape descriptors
+            area = cv2.contourArea(contour)
+            perimeter = cv2.arcLength(contour, True)
+
+            # Circularity (4π*area/perimeter²)
+            if perimeter > 0:
+                circularity = 4 * np.pi * area / (perimeter * perimeter)
+            else:
+                circularity = 0
+
+            # If circularity is very low, might be overlapping particles
+            if circularity < 0.3:
+                return True
+
+            # Check for convexity
+            hull = cv2.convexHull(contour)
+            hull_area = cv2.contourArea(hull)
+            if hull_area > 0:
+                solidity = area / hull_area
+                if solidity < 0.7:  # Low solidity suggests overlapping
+                    return True
+
+            return False
+
+        except Exception as e:
+            self.logger.error(f"Error analyzing large particle: {str(e)}")
+            return False
+
+    def cluster_based_overlap_detection(self, contours, image_shape):
+        """Use clustering to detect potential overlapping regions."""
+        try:
+            if len(contours) < 3:
+                return 0
+
+            # Extract features for clustering
+            features = []
+            for contour in contours:
+                area = cv2.contourArea(contour)
+                if area < Config.MIN_CONTOUR_AREA:
+                    continue
+
+                x, y, w, h = cv2.boundingRect(contour)
+                M = cv2.moments(contour)
+                if M["m00"] != 0:
+                    cx = M["m10"] / M["m00"]
+                    cy = M["m01"] / M["m00"]
+                else:
+                    cx, cy = x + w / 2, y + h / 2
+
+                features.append([cx, cy, area, w * h])
+
+            if len(features) < 3:
+                return 0
+
+            features = np.array(features)
 
             # Normalize features
             scaler = StandardScaler()
             features_normalized = scaler.fit_transform(features)
 
-            # Determine optimal number of clusters
-            max_clusters = min(Config.MAX_CLUSTERS, len(features))
+            # Use DBSCAN to find dense regions (potential overlaps)
+            dbscan = DBSCAN(eps=0.5, min_samples=2)
+            clusters = dbscan.fit_predict(features_normalized[:, :2])  # Use only position
 
-            # Apply K-Means clustering
-            kmeans = KMeans(n_clusters=max_clusters, random_state=Config.RANDOM_STATE, n_init=10)
-            cluster_labels = kmeans.fit_predict(features_normalized)
+            # Count dense clusters as potential overlap regions
+            unique_clusters = set(clusters)
+            overlap_regions = len([c for c in unique_clusters if c != -1 and np.sum(clusters == c) >= 2])
 
-            # Group contours by cluster
-            clustered_contours = []
-            for i in range(max_clusters):
-                cluster_contours = [valid_contours[j] for j in range(len(valid_contours)) if cluster_labels[j] == i]
-                if len(cluster_contours) >= Config.MIN_CLUSTER_SIZE:
-                    clustered_contours.append(cluster_contours)
-
-            return clustered_contours
+            return overlap_regions
 
         except Exception as e:
-            self.logger.error(f"Error clustering contours with K-Means: {str(e)}")
-            return []
-
-    def cluster_contours_dbscan(self, contours):
-        """
-        Alternative clustering using DBSCAN for density-based overlap detection.
-        """
-        try:
-            if not contours or len(contours) < 2:
-                return []
-
-            # Extract spatial features
-            centers = []
-            valid_contours = []
-
-            for contour in contours:
-                M = cv2.moments(contour)
-                if M["m00"] != 0:
-                    cx = int(M["m10"] / M["m00"])
-                    cy = int(M["m01"] / M["m00"])
-                    centers.append([cx, cy])
-                    valid_contours.append(contour)
-
-            if len(centers) < 2:
-                return []
-
-            # Apply DBSCAN clustering
-            dbscan = DBSCAN(eps=50, min_samples=2)
-            cluster_labels = dbscan.fit_predict(centers)
-
-            # Group contours by cluster (excluding noise points labeled as -1)
-            clustered_contours = []
-            unique_labels = set(cluster_labels) - {-1}
-
-            for label in unique_labels:
-                cluster_contours = [valid_contours[i] for i in range(len(valid_contours)) if cluster_labels[i] == label]
-                if len(cluster_contours) >= 2:  # At least 2 contours for overlap
-                    clustered_contours.append(cluster_contours)
-
-            return clustered_contours
-
-        except Exception as e:
-            self.logger.error(f"Error clustering contours with DBSCAN: {str(e)}")
-            return []
-
-    def match_contours_across_images(self, contours_list):
-        """
-        Match contours across multiple images to validate overlaps.
-        """
-        try:
-            if len(contours_list) < 2:
-                return []
-
-            matches = []
-            base_contours = contours_list[0]
-
-            for base_contour in base_contours:
-                matched_group = [base_contour]
-
-                for other_contours in contours_list[1:]:
-                    best_match = None
-                    min_distance = float('inf')
-
-                    for other_contour in other_contours:
-                        # Use Hu moments for shape matching
-                        try:
-                            distance = cv2.matchShapes(base_contour, other_contour, cv2.CONTOURS_MATCH_I1, 0)
-                            if distance < min_distance and distance < Config.MATCH_SHAPE_THRESHOLD:
-                                min_distance = distance
-                                best_match = other_contour
-                        except:
-                            continue
-
-                    if best_match is not None:
-                        matched_group.append(best_match)
-
-                # Consider it a match if found in at least 2 images
-                if len(matched_group) >= 2:
-                    matches.append(matched_group)
-
-            return matches
-
-        except Exception as e:
-            self.logger.error(f"Error matching contours across images: {str(e)}")
-            return []
-
-    def analyze_overlap_density(self, image, contours):
-        """
-        Analyze local density to identify overlapping regions.
-        """
-        try:
-            if not contours:
-                return []
-
-            # Create density map
-            density_map = np.zeros(image.shape[:2], dtype=np.float32)
-
-            for contour in contours:
-                # Create mask for current contour
-                mask = np.zeros(image.shape[:2], dtype=np.uint8)
-                cv2.drawContours(mask, [contour], -1, 1, -1)
-
-                # Add to density map
-                density_map += mask.astype(np.float32)
-
-            # Find high-density regions (overlaps)
-            overlap_regions = []
-            high_density_mask = density_map > 1.5  # Threshold for overlap detection
-
-            # Find contours in high-density regions
-            high_density_contours, _ = cv2.findContours(
-                high_density_mask.astype(np.uint8),
-                cv2.RETR_EXTERNAL,
-                cv2.CHAIN_APPROX_SIMPLE
-            )
-
-            for contour in high_density_contours:
-                if cv2.contourArea(contour) > Config.MIN_CONTOUR_AREA:
-                    overlap_regions.append(contour)
-
-            return overlap_regions, density_map
-
-        except Exception as e:
-            self.logger.error(f"Error analyzing overlap density: {str(e)}")
-            return [], np.zeros(image.shape[:2])
+            self.logger.error(f"Error in cluster-based overlap detection: {str(e)}")
+            return 0
 
     def count_overlaps(self, image_paths, sample_id, output_dir):
         """
-        Comprehensive overlap counting using multiple methods.
+        Comprehensive overlap analysis for a sample with multiple images.
         """
         try:
-            # Load and process images
-            images = []
-            contours_list = []
+            self.logger.info(f"Analyzing overlaps for sample {sample_id}")
 
-            for path in image_paths:
-                img = load_image(path)
-                images.append(img)
+            total_overlap_count = 0
+            overlap_details = []
+            all_contours = []
 
-                # Segment image
-                contours = self.segmenter.segment_image(img, f"{sample_id}_{len(images)}", output_dir)[0]
-                contours_list.append(contours)
+            for i, image_path in enumerate(image_paths):
+                try:
+                    # Load image
+                    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+                    if image is None:
+                        self.logger.warning(f"Could not load image: {image_path}")
+                        continue
 
-            # Method 1: Histogram peak analysis
-            peak_counts = []
-            for img in images:
-                peaks, hist, properties = self.detect_histogram_peaks(img)
-                peak_counts.append(len(peaks))
+                    # Simple segmentation for overlap analysis
+                    contours = self.simple_segmentation(image)
+                    all_contours.extend(contours)
 
-            histogram_overlap_estimate = max(1, int(np.mean(peak_counts))) if peak_counts else 1
+                    # Analyze overlaps in this image
+                    overlap_count, overlap_pairs = self.analyze_contour_overlap(contours)
 
-            # Method 2: K-Means clustering
-            all_contours = [cnt for contours in contours_list for cnt in contours]
-            kmeans_clusters = self.cluster_contours_kmeans(all_contours)
-            kmeans_overlap_count = len(kmeans_clusters)
+                    # Cluster-based detection
+                    cluster_overlaps = self.cluster_based_overlap_detection(contours, image.shape)
 
-            # Method 3: DBSCAN clustering
-            dbscan_clusters = self.cluster_contours_dbscan(all_contours)
-            dbscan_overlap_count = len(dbscan_clusters)
+                    # Combine results (take maximum to avoid double counting)
+                    image_overlaps = max(overlap_count, cluster_overlaps)
+                    total_overlap_count += image_overlaps
 
-            # Method 4: Cross-image matching
-            cross_matches = self.match_contours_across_images(contours_list)
-            cross_match_count = len(cross_matches)
+                    overlap_details.append({
+                        'image_index': i,
+                        'image_path': os.path.basename(image_path),
+                        'contours_found': len(contours),
+                        'overlap_count': image_overlaps,
+                        'overlap_pairs': len(overlap_pairs),
+                        'cluster_overlaps': cluster_overlaps
+                    })
 
-            # Method 5: Density analysis
-            if images:
-                overlap_regions, density_map = self.analyze_overlap_density(images[0], all_contours)
-                density_overlap_count = len(overlap_regions)
-            else:
-                density_overlap_count = 0
-                density_map = np.zeros((100, 100))
+                    self.logger.info(f"Image {i + 1}: {len(contours)} contours, {image_overlaps} overlaps")
 
-            # Combine results using weighted average
-            overlap_estimates = [
-                histogram_overlap_estimate * 0.2,
-                kmeans_overlap_count * 0.3,
-                dbscan_overlap_count * 0.2,
-                cross_match_count * 0.2,
-                density_overlap_count * 0.1
-            ]
+                except Exception as e:
+                    self.logger.error(f"Error processing image {image_path}: {str(e)}")
+                    continue
 
-            final_overlap_count = max(1, int(np.sum(overlap_estimates)))
+            # Cross-image overlap analysis
+            cross_image_overlaps = self.analyze_cross_image_patterns(all_contours)
+            total_overlap_count += cross_image_overlaps
 
-            # Create comprehensive visualization
-            self.visualize_overlap_analysis(
-                images, contours_list, all_contours,
-                kmeans_clusters, dbscan_clusters, cross_matches,
-                density_map, overlap_regions, sample_id, output_dir,
-                {
-                    'histogram': histogram_overlap_estimate,
-                    'kmeans': kmeans_overlap_count,
-                    'dbscan': dbscan_overlap_count,
-                    'cross_match': cross_match_count,
-                    'density': density_overlap_count,
-                    'final': final_overlap_count
-                }
-            )
+            # Save detailed overlap analysis
+            self.save_overlap_analysis(sample_id, overlap_details, total_overlap_count,
+                                       cross_image_overlaps, output_dir)
 
-            # Save detailed overlap report
-            self.save_overlap_report(sample_id, output_dir, {
-                'histogram_peaks': histogram_overlap_estimate,
-                'kmeans_clusters': kmeans_overlap_count,
-                'dbscan_clusters': dbscan_overlap_count,
-                'cross_matches': cross_match_count,
-                'density_regions': density_overlap_count,
-                'final_count': final_overlap_count,
-                'total_contours': len(all_contours),
-                'images_analyzed': len(images)
-            })
+            # Create visualization
+            self.create_overlap_visualization(sample_id, overlap_details, output_dir)
 
-            return final_overlap_count
+            self.logger.info(f"Total overlaps detected for {sample_id}: {total_overlap_count}")
+            return total_overlap_count
 
         except Exception as e:
             self.logger.error(f"Error counting overlaps for {sample_id}: {str(e)}")
-            return 1
+            return 1  # Return default value
 
-    def visualize_overlap_analysis(self, images, contours_list, all_contours,
-                                   kmeans_clusters, dbscan_clusters, cross_matches,
-                                   density_map, overlap_regions, sample_id, output_dir, counts):
-        """
-        Create comprehensive overlap analysis visualization.
-        """
+    def simple_segmentation(self, image):
+        """Simple segmentation for overlap analysis."""
         try:
-            fig, axes = plt.subplots(3, 4, figsize=(20, 15))
-            fig.suptitle(f'Overlap Analysis - {sample_id}', fontsize=16)
+            # Apply Gaussian blur
+            blurred = cv2.GaussianBlur(image, (5, 5), 0)
 
-            # Row 1: Original images and all contours
-            for i, (img, contours) in enumerate(zip(images[:3], contours_list[:3])):
-                if i < len(images):
-                    # Original image with contours
-                    img_with_contours = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
-                    cv2.drawContours(img_with_contours, contours, -1, Config.COLORS['particles'], 2)
-                    axes[0, i].imshow(cv2.cvtColor(img_with_contours, cv2.COLOR_BGR2RGB))
-                    axes[0, i].set_title(f'Image {i + 1} ({len(contours)} particles)')
-                    axes[0, i].axis('off')
-                else:
-                    axes[0, i].axis('off')
+            # Otsu thresholding
+            _, binary = cv2.threshold(blurred, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-            # All contours combined
-            if images:
-                combined_img = cv2.cvtColor(images[0], cv2.COLOR_GRAY2BGR)
-                cv2.drawContours(combined_img, all_contours, -1, Config.COLORS['particles'], 1)
-                axes[0, 3].imshow(cv2.cvtColor(combined_img, cv2.COLOR_BGR2RGB))
-                axes[0, 3].set_title(f'All Contours ({len(all_contours)})')
-                axes[0, 3].axis('off')
+            # Find contours
+            contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-            # Row 2: Clustering results
-            # K-Means clusters
-            if images and kmeans_clusters:
-                kmeans_img = cv2.cvtColor(images[0], cv2.COLOR_GRAY2BGR)
-                colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (255, 0, 255)]
-                for i, cluster in enumerate(kmeans_clusters):
-                    color = colors[i % len(colors)]
-                    cv2.drawContours(kmeans_img, cluster, -1, color, 2)
-                axes[1, 0].imshow(cv2.cvtColor(kmeans_img, cv2.COLOR_BGR2RGB))
-                axes[1, 0].set_title(f'K-Means Clusters ({counts["kmeans"]})')
-                axes[1, 0].axis('off')
-            else:
-                axes[1, 0].text(0.5, 0.5, 'No K-Means clusters', ha='center', va='center')
-                axes[1, 0].set_title('K-Means Clusters (0)')
-                axes[1, 0].axis('off')
+            # Filter by area
+            valid_contours = []
+            for contour in contours:
+                area = cv2.contourArea(contour)
+                if Config.MIN_CONTOUR_AREA <= area <= Config.MAX_CONTOUR_AREA:
+                    valid_contours.append(contour)
 
-            # DBSCAN clusters
-            if images and dbscan_clusters:
-                dbscan_img = cv2.cvtColor(images[0], cv2.COLOR_GRAY2BGR)
-                colors = [(255, 100, 0), (100, 255, 0), (0, 100, 255), (255, 0, 100), (100, 0, 255)]
-                for i, cluster in enumerate(dbscan_clusters):
-                    color = colors[i % len(colors)]
-                    cv2.drawContours(dbscan_img, cluster, -1, color, 2)
-                axes[1, 1].imshow(cv2.cvtColor(dbscan_img, cv2.COLOR_BGR2RGB))
-                axes[1, 1].set_title(f'DBSCAN Clusters ({counts["dbscan"]})')
-                axes[1, 1].axis('off')
-            else:
-                axes[1, 1].text(0.5, 0.5, 'No DBSCAN clusters', ha='center', va='center')
-                axes[1, 1].set_title('DBSCAN Clusters (0)')
-                axes[1, 1].axis('off')
+            return valid_contours
 
-            # Cross-image matches
-            if images and cross_matches:
-                match_img = cv2.cvtColor(images[0], cv2.COLOR_GRAY2BGR)
-                for i, match_group in enumerate(cross_matches):
-                    color = (0, 255, 255)  # Cyan for matches
-                    cv2.drawContours(match_img, [match_group[0]], -1, color, 3)
-                axes[1, 2].imshow(cv2.cvtColor(match_img, cv2.COLOR_BGR2RGB))
-                axes[1, 2].set_title(f'Cross-Image Matches ({counts["cross_match"]})')
-                axes[1, 2].axis('off')
-            else:
-                axes[1, 2].text(0.5, 0.5, 'No cross matches', ha='center', va='center')
-                axes[1, 2].set_title('Cross-Image Matches (0)')
-                axes[1, 2].axis('off')
+        except Exception as e:
+            self.logger.error(f"Error in simple segmentation: {str(e)}")
+            return []
 
-            # Density map
-            if density_map.size > 0:
-                im = axes[1, 3].imshow(density_map, cmap='hot', interpolation='nearest')
-                axes[1, 3].set_title(f'Density Map ({counts["density"]} regions)')
-                plt.colorbar(im, ax=axes[1, 3])
-            else:
-                axes[1, 3].text(0.5, 0.5, 'No density map', ha='center', va='center')
-                axes[1, 3].set_title('Density Map (0)')
-            axes[1, 3].axis('off')
+    def analyze_cross_image_patterns(self, all_contours):
+        """Analyze patterns across multiple images for consistency."""
+        try:
+            if len(all_contours) < 5:
+                return 0
 
-            # Row 3: Analysis and statistics
-            # Histogram analysis
-            if images:
-                hist, bins = np.histogram(images[0].ravel(), bins=50, range=(0, 255))
-                axes[2, 0].plot(bins[:-1], hist)
-                axes[2, 0].set_title(f'Intensity Histogram\n({counts["histogram"]} peaks)')
-                axes[2, 0].set_xlabel('Intensity')
-                axes[2, 0].set_ylabel('Frequency')
-                axes[2, 0].grid(True, alpha=0.3)
+            # Calculate total area and average particle size
+            total_area = sum(cv2.contourArea(cnt) for cnt in all_contours)
+            avg_area = total_area / len(all_contours)
 
-            # Overlap method comparison
-            methods = ['Histogram', 'K-Means', 'DBSCAN', 'Cross-Match', 'Density']
-            values = [counts['histogram'], counts['kmeans'], counts['dbscan'],
-                      counts['cross_match'], counts['density']]
+            # Check for unusually large particles that might be overlaps
+            large_particle_count = sum(1 for cnt in all_contours
+                                       if cv2.contourArea(cnt) > avg_area * 2.5)
 
-            bars = axes[2, 1].bar(methods, values, color=['skyblue', 'lightgreen', 'lightcoral', 'gold', 'plum'])
-            axes[2, 1].set_title('Overlap Detection Methods')
-            axes[2, 1].set_ylabel('Detected Overlaps')
-            axes[2, 1].tick_params(axis='x', rotation=45)
+            # Estimate overlaps based on size distribution
+            cross_image_overlaps = int(large_particle_count * 0.7)  # Heuristic
 
-            # Add value labels on bars
-            for bar, value in zip(bars, values):
-                height = bar.get_height()
-                axes[2, 1].text(bar.get_x() + bar.get_width() / 2., height + 0.1,
-                                f'{value}', ha='center', va='bottom')
+            return cross_image_overlaps
 
-            # Final result summary
-            axes[2, 2].text(0.1, 0.8, f'Final Overlap Count: {counts["final"]}',
-                            fontsize=14, fontweight='bold', transform=axes[2, 2].transAxes)
-            axes[2, 2].text(0.1, 0.6, f'Total Contours: {len(all_contours)}',
-                            fontsize=12, transform=axes[2, 2].transAxes)
-            axes[2, 2].text(0.1, 0.4, f'Images Analyzed: {len(images)}',
-                            fontsize=12, transform=axes[2, 2].transAxes)
-            axes[2, 2].text(0.1, 0.2, f'Average per Image: {len(all_contours) / max(1, len(images)):.1f}',
-                            fontsize=12, transform=axes[2, 2].transAxes)
-            axes[2, 2].set_title('Analysis Summary')
-            axes[2, 2].axis('off')
+        except Exception as e:
+            self.logger.error(f"Error in cross-image pattern analysis: {str(e)}")
+            return 0
 
-            # Particle size distribution
-            if all_contours:
-                areas = [cv2.contourArea(cnt) for cnt in all_contours]
-                axes[2, 3].hist(areas, bins=20, alpha=0.7, color='lightblue', edgecolor='black')
-                axes[2, 3].set_xlabel('Particle Area (pixels)')
-                axes[2, 3].set_ylabel('Frequency')
-                axes[2, 3].set_title('Particle Size Distribution')
-                axes[2, 3].grid(True, alpha=0.3)
+    def save_overlap_analysis(self, sample_id, overlap_details, total_overlaps,
+                              cross_image_overlaps, output_dir):
+        """Save detailed overlap analysis results."""
+        try:
+            os.makedirs(output_dir, exist_ok=True)
 
-                # Add mean line
-                mean_area = np.mean(areas)
-                axes[2, 3].axvline(mean_area, color='red', linestyle='--',
-                                   label=f'Mean: {mean_area:.0f}')
-                axes[2, 3].legend()
+            # Save detailed CSV
+            df = pd.DataFrame(overlap_details)
+            csv_path = os.path.join(output_dir, f'{sample_id}_overlap_details.csv')
+            df.to_csv(csv_path, index=False)
+
+            # Save summary report
+            report_path = os.path.join(output_dir, f'{sample_id}_overlap_summary.txt')
+            with open(report_path, 'w') as f:
+                f.write(f"Overlap Analysis Report - {sample_id}\n")
+                f.write("=" * 50 + "\n\n")
+                f.write(f"Total Images Analyzed: {len(overlap_details)}\n")
+                f.write(f"Total Contours Found: {sum(d['contours_found'] for d in overlap_details)}\n")
+                f.write(f"Total Overlaps Detected: {total_overlaps}\n")
+                f.write(f"Cross-Image Overlaps: {cross_image_overlaps}\n\n")
+
+                f.write("Per-Image Results:\n")
+                for detail in overlap_details:
+                    f.write(f"  {detail['image_path']}: {detail['overlap_count']} overlaps "
+                            f"from {detail['contours_found']} contours\n")
+
+            self.logger.info(f"Saved overlap analysis: {csv_path}, {report_path}")
+
+        except Exception as e:
+            self.logger.error(f"Error saving overlap analysis: {str(e)}")
+
+    def create_overlap_visualization(self, sample_id, overlap_details, output_dir):
+        """Create comprehensive overlap visualization."""
+        try:
+            if not overlap_details:
+                return
+
+            fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+            fig.suptitle(f'Overlap Analysis - {sample_id}', fontsize=16, fontweight='bold')
+
+            # 1. Overlaps per image
+            image_indices = [d['image_index'] for d in overlap_details]
+            overlap_counts = [d['overlap_count'] for d in overlap_details]
+
+            axes[0, 0].bar(image_indices, overlap_counts, color='skyblue', alpha=0.7)
+            axes[0, 0].set_xlabel('Image Index')
+            axes[0, 0].set_ylabel('Overlap Count')
+            axes[0, 0].set_title('Overlaps per Image')
+            axes[0, 0].grid(True, alpha=0.3)
+
+            # 2. Contours vs Overlaps scatter
+            contour_counts = [d['contours_found'] for d in overlap_details]
+            axes[0, 1].scatter(contour_counts, overlap_counts, alpha=0.7, s=50)
+            axes[0, 1].set_xlabel('Contours Found')
+            axes[0, 1].set_ylabel('Overlaps Detected')
+            axes[0, 1].set_title('Contours vs Overlaps Relationship')
+            axes[0, 1].grid(True, alpha=0.3)
+
+            # Add trend line
+            if len(contour_counts) > 1:
+                z = np.polyfit(contour_counts, overlap_counts, 1)
+                p = np.poly1d(z)
+                axes[0, 1].plot(contour_counts, p(contour_counts), "r--", alpha=0.8)
+
+            # 3. Overlap distribution
+            if overlap_counts:
+                axes[1, 0].hist(overlap_counts, bins=max(3, len(set(overlap_counts))),
+                                alpha=0.7, color='lightcoral', edgecolor='black')
+                axes[1, 0].set_xlabel('Overlap Count')
+                axes[1, 0].set_ylabel('Frequency')
+                axes[1, 0].set_title('Overlap Count Distribution')
+                axes[1, 0].grid(True, alpha=0.3)
+
+            # 4. Summary statistics
+            total_contours = sum(contour_counts)
+            total_overlaps = sum(overlap_counts)
+            avg_overlaps = np.mean(overlap_counts) if overlap_counts else 0
+
+            axes[1, 1].text(0.1, 0.8, f'Total Images: {len(overlap_details)}',
+                            transform=axes[1, 1].transAxes, fontsize=12)
+            axes[1, 1].text(0.1, 0.7, f'Total Contours: {total_contours}',
+                            transform=axes[1, 1].transAxes, fontsize=12)
+            axes[1, 1].text(0.1, 0.6, f'Total Overlaps: {total_overlaps}',
+                            transform=axes[1, 1].transAxes, fontsize=12)
+            axes[1, 1].text(0.1, 0.5, f'Avg Overlaps/Image: {avg_overlaps:.2f}',
+                            transform=axes[1, 1].transAxes, fontsize=12)
+            axes[1, 1].text(0.1, 0.4, f'Overlap Rate: {total_overlaps / total_contours * 100:.1f}%'
+            if total_contours > 0 else 'Overlap Rate: 0%',
+                            transform=axes[1, 1].transAxes, fontsize=12)
+
+            axes[1, 1].set_title('Analysis Summary')
+            axes[1, 1].axis('off')
 
             plt.tight_layout()
 
             # Save visualization
-            output_path = os.path.join(output_dir, f'{sample_id}_overlap_analysis.png')
-            plt.savefig(output_path, dpi=Config.PLOT_DPI, bbox_inches='tight')
+            viz_path = os.path.join(output_dir, f'{sample_id}_overlap_visualization.png')
+            plt.savefig(viz_path, dpi=Config.PLOT_DPI, bbox_inches='tight')
             plt.close()
 
-            self.logger.info(f"Saved overlap analysis visualization: {output_path}")
+            self.logger.info(f"Saved overlap visualization: {viz_path}")
 
         except Exception as e:
             self.logger.error(f"Error creating overlap visualization: {str(e)}")
 
-    def save_overlap_report(self, sample_id, output_dir, results):
-        """
-        Save detailed overlap analysis report.
-        """
-        try:
-            report_path = os.path.join(output_dir, f'{sample_id}_overlap_report.txt')
 
-            with open(report_path, 'w') as f:
-                f.write(f"Overlap Analysis Report - {sample_id}\n")
-                f.write("=" * 50 + "\n\n")
-
-                f.write("Detection Method Results:\n")
-                f.write(f"- Histogram Peaks: {results['histogram_peaks']}\n")
-                f.write(f"- K-Means Clusters: {results['kmeans_clusters']}\n")
-                f.write(f"- DBSCAN Clusters: {results['dbscan_clusters']}\n")
-                f.write(f"- Cross-Image Matches: {results['cross_matches']}\n")
-                f.write(f"- Density Regions: {results['density_regions']}\n\n")
-
-                f.write("Summary:\n")
-                f.write(f"- Final Overlap Count: {results['final_count']}\n")
-                f.write(f"- Total Contours Detected: {results['total_contours']}\n")
-                f.write(f"- Images Analyzed: {results['images_analyzed']}\n")
-                f.write(
-                    f"- Average Contours per Image: {results['total_contours'] / max(1, results['images_analyzed']):.2f}\n")
-
-                f.write(f"\nAnalysis Parameters:\n")
-                f.write(f"- Minimum Contour Area: {Config.MIN_CONTOUR_AREA}\n")
-                f.write(f"- Maximum Contour Area: {Config.MAX_CONTOUR_AREA}\n")
-                f.write(f"- Shape Match Threshold: {Config.MATCH_SHAPE_THRESHOLD}\n")
-                f.write(f"- Minimum Cluster Size: {Config.MIN_CLUSTER_SIZE}\n")
-
-            self.logger.info(f"Saved overlap report: {report_path}")
-
-        except Exception as e:
-            self.logger.error(f"Error saving overlap report: {str(e)}")
-
-
-def count_overlaps(image_paths, visualization_dir, sample_id):
-    """
-    Wrapper function for backward compatibility.
-    """
+# Backward compatibility function
+def count_overlaps(image_paths, sample_id, output_dir):
+    """Wrapper function for backward compatibility."""
     analyzer = OverlapAnalyzer()
-    return analyzer.count_overlaps(image_paths, sample_id, visualization_dir)
+    return analyzer.count_overlaps(image_paths, sample_id, output_dir)
